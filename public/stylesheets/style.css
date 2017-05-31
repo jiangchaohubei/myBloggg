@@ -1,14 +1,61 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: url(../images/beach.jpg) top center no-repeat;
-  background-size:cover;
-  background-attachment:scroll;
+  background-color: #efefef!important;
+  /*padding: 50px;*/
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  /*background: url(../images/beach.jpg) top center no-repeat;*/
+  /*background-size:cover;*/
+  /*background-attachment:hidden;*/
 }
 
 a {
   color: #00B7FF;
 
+}
+.navbar-default {
+  background-color: transparent!important;
+  border-color: #e7e7e7;
+}
+.main{
+  height: 1000px;
+}
+.picture-carousel{
+  background: url(../images/beach.jpg) top center no-repeat;
+  background-size:cover;
+}
+.box-left{
+  width:750px;
+  float: left;
+}
+.box-right{
+  float: right;
+}
+h2.title-home{
+  font: 24px "微软雅黑", Arial, Helvetica, sans-serif;
+  color: #5bc0de;
+  font-weight: bold;
+  /*background: url(../images/h_line.jpg) repeat-x 20px center;*/
+}
+figure {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 40px;
+  -webkit-margin-end: 40px;
+}
+.dateview {
+  width: 695px;
+  overflow: hidden;
+  clear: both;
+  margin: 10px 0 0 0;
+  display: inline-block;
+  background: #f6f6f6 url(../images/time.jpg) 15px center no-repeat;
+  line-height: 26px;
+  height: 26px;
+  color: #838383;
+  padding-left: 25px;
+}
+.left {
+  float: left;
 }
 .footer{
   margin-bottom: 50px;
