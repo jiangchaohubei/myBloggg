@@ -12,11 +12,76 @@ a {
 
 }
 .navbar-default {
-  background-color: transparent!important;
+  background-color: #444!important;
   border-color: #e7e7e7;
 }
 .main{
-  height: 1000px;
+  height: auto;
+}
+.main .box-right .content-category ul{
+  list-style:none;
+  padding:0px;
+}
+.main .box-right .content-category ul li{
+  width:110px;
+  float:left;
+  margin: 5px;
+  background-color: #9acfea;
+  text-align:center;
+  height:40px;
+}
+.main .box-right .content-category ul li:hover{
+  transform: rotate(360deg);
+  -ms-transform: rotate(360deg); /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Safari and Chrome */
+  transition-duration: 1s;  /*渐变时间*/
+  background-color:#efefef;
+}
+.main .box-right .content-category ul li a{
+  text-decoration:none;
+  color:#000;
+  line-height:40px;
+}
+.main .box-right .hot-sort .active-line{
+  position: relative;
+  width: 100px;
+  height: 1px;
+  background: #3472ef;
+  top: 50px;
+  left: 0;
+}
+.main .box-right .hot-sort ul{
+  list-style:none;
+  padding:0px;
+  border-bottom: 1px solid #d6d6d6;
+  height:40px;
+}
+.main .box-right .hot-sort .list{
+  width: 290px;
+  overflow: hidden;
+  float: left;
+}
+.main .box-right .hot-sort .list ul li{
+  height: 35px;
+  line-height: 35px;
+  padding-left: 28px;
+  width: 260px;
+  border-bottom: 1px solid #cecece;
+
+}
+.main .box-right .hot-sort ul li{
+  float: left;
+  width: 33.3%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 15px;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  transition: all 1s;
+}
+.main .box-right .hot-sort ul .active{
+  color: #3472ef;
 }
 .picture-carousel{
   background: url(../images/beach.jpg) top center no-repeat;
@@ -27,7 +92,7 @@ a {
   float: left;
 }
 .box-right{
-  float: right;
+  float: left;
 }
 h2.title-home{
   font: 24px "微软雅黑", Arial, Helvetica, sans-serif;
@@ -37,26 +102,38 @@ h2.title-home{
 }
 figure {
   display: block;
-  -webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
+
   -webkit-margin-start: 40px;
   -webkit-margin-end: 40px;
 }
 .dateview {
-  width: 695px;
-  overflow: hidden;
-  clear: both;
-  margin: 10px 0 0 0;
-  display: inline-block;
+  width: 400px;
+  bottom: -55px;
+  position:relative;
   background: #f6f6f6 url(../images/time.jpg) 15px center no-repeat;
   line-height: 26px;
   height: 26px;
   color: #838383;
-  padding-left: 25px;
+  padding-left: 40px;
+}
+.article{
+  height:250px;
 }
 .left {
   float: left;
 }
+.right {
+  float: right;
+}
 .footer{
-  margin-bottom: 50px;
+  background-color:#efefef;
+  height:200px;
+
+}
+#footer p{
+ margin:180px auto 20px auto;
+
+}
+.title-shadow{
+  text-shadow: #555555 5px 5px 5px;
 }
