@@ -23,7 +23,7 @@ a {
   padding:0px;
 }
 .main .box-right .content-category ul li{
-  width:110px;
+  width:125px;
   float:left;
   margin: 5px;
   background-color: #9acfea;
@@ -57,7 +57,7 @@ a {
   height:40px;
 }
 .main .box-right .hot-sort .list{
-  width: 290px;
+  width: 277.5px;
   overflow: hidden;
   float: left;
 }
@@ -65,9 +65,41 @@ a {
   height: 35px;
   line-height: 35px;
   padding-left: 28px;
-  width: 260px;
+  width: 277.5px;
   border-bottom: 1px solid #cecece;
 
+}
+.main .box-right .hot-sort ul.number{
+  position: relative;
+  float: left;
+  top: -200px;
+  width:30px;
+  border-bottom: hidden;
+  padding-left: 5px;
+
+}
+.main .box-right .hot-sort ul.number li{
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  color: #fff;
+  background-color: #979598;
+}
+.main .box-right .hot-sort ul.number li.one{
+  background-color: #ff858e;
+}
+.main .box-right .hot-sort ul.number li.two{
+  background-color: #77d549;
+}
+.main .box-right .hot-sort ul.number li.three{
+  background-color: #62c1ff;
+}
+
+.hort-sort-content{
+  position: relative;
 }
 .main .box-right .hot-sort ul li{
   float: left;
@@ -82,6 +114,9 @@ a {
 }
 .main .box-right .hot-sort ul .active{
   color: #3472ef;
+}
+.main .box-right .hot-sort {
+  overflow: hidden;
 }
 .picture-carousel{
   background: url(../images/beach.jpg) top center no-repeat;
@@ -118,6 +153,10 @@ figure {
 }
 .article{
   height:250px;
+  background-color: #ffffff;
+}
+.article :hover{
+  box-shadow: #555555 5px 5px 5px;
 }
 .left {
   float: left;
@@ -136,4 +175,8 @@ figure {
 }
 .title-shadow{
   text-shadow: #555555 5px 5px 5px;
+}
+.divCenter{
+  top:30%;
+  position:relative
 }

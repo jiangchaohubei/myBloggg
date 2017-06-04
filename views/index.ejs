@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="/images/beach.jpg" type="image/x-icon"/>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
     <link rel='stylesheet' href='/tether/css/tether.min.css'/>
@@ -11,7 +12,8 @@
     <script src="/javascripts/index.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
 </head>
-<body><!-- --------------------------nav------------------------->
+<body>
+<!-- --------------------------导航------------------------->
 <div class="container navigation">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -23,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">首页</a>
+                <a class="navbar-brand" href="/">首页</a>
             </div>
             <div>
                 <form class="navbar-form navbar-left" role="search">
@@ -37,20 +39,9 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">博客</a></li>
                     <li><a href="#">音乐</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Java <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">jmeter</a></li>
-                            <li><a href="#">EJB</a></li>
-                            <li><a href="#">Jasper Report</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">分离的链接</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">另一个分离的链接</a></li>
-                        </ul>
-                    </li>
+                    <li><a menu-url="/blogWrite">写博客</a></li>
+                    <li><a href="#">留言</a></li>
+                    <li><a href="#">关于</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
@@ -61,13 +52,15 @@
         </div>
     </nav>
 </div>
+<!--背景图片-->
 <div style="height: 400px" class="picture-carousel"></div>
 
-<div class="container main">
+<div id="mainPage" class="container main">
     <div class="col-xs-12">
+        <!--文章推荐-->
     <div class="box-left col-xs-3">
-        <h2 class="title-home">文章推荐</h2>
-        <div class="bloglist left">
+        <h2 class="title-home title-shadow">文章推荐</h2>
+        <div class="bloglist left" >
             <div class="article">
                 <h3><a href="/jstt/bj/2015-01-09/740.html">【匆匆那些年】总结个人博客经历的这四年…</a></h3>
                 <div class="left" style="width:250px;height: 200px">
@@ -132,13 +125,15 @@
         </div>
     </div>
     <div class="box-right col-xs-3">
+        <!--搜索-->
         <div class="row" style="padding-top: 30px">
             <form method="post" action="/article/search" class="form-wrapper">
                 <input type="text" id="search" name="search" placeholder="请输入要搜索的文章" required="">
                 <input type="submit" value="搜索" id="submit">
             </form>
         </div>
-        <div class="row content-category" style="padding-top: 30px">
+        <!--内容分类-->
+        <div class="row content-category" style="margin-top: 30px;background-color: #ffffff">
             <h1 class="title-shadow" style="color: #5bc0de">内容分类</h1>
             <ul>
                 <li><a href="#">nodejs</a></li>
@@ -150,7 +145,9 @@
                 <li><a href="#">其他</a></li>
             </ul>
         </div>
-        <div class="row hot-sort" style="padding-top: 30px">
+
+        <!--热门排行-->
+        <div class="row hot-sort" style="margin-top: 30px;padding-bottom:-20px;height:auto;background-color: #ffffff">
             <h1 class="title-shadow" style="color: #5bc0de">热门排行</h1>
             <p id="active-line" class="active-line" style="width: 93px; left: 0px;"></p>
             <ul class="hot-recommend-ul">
@@ -158,17 +155,60 @@
                 <li class order="1">评论排行</li>
                 <li class order="2">点赞排行</li>
             </ul>
+            <div id="hort-sort-content" class="hort-sort-content" style="width: 835.5px;left:0px;">
             <div class="list">
                 <ul class="" style="border-bottom: 0px ;">
                     <li >点击排行</li>
                     <li >评论排行</li>
                     <li >点赞排行</li>
+                    <li >点击排行</li>
+                    <li >评论排行</li>
+                    <li >点赞排行</li>
                 </ul>
             </div>
+                <div class="list">
+                    <ul class="" style="border-bottom: 0px ;">
+                        <li >点击排行</li>
+                        <li >评论排行</li>
+                        <li >点赞排行</li>
+                        <li >点击排行</li>
+                        <li >评论排行</li>
+                        <li >点赞排行</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul class="" style="border-bottom: 0px ;">
+                        <li >点击排行</li>
+                        <li >评论排行</li>
+                        <li >点赞排行</li>
+                        <li >点击排行</li>
+                        <li >评论排行</li>
+                        <li >点赞排行</li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="number">
+                <li class="one">1</li>
+                <li class="two">2</li>
+                <li class="three">3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+
+            </ul>
+        </div>
+        <!--友情链接-->
+        <div class="row content-category" style="margin-top: 30px;background-color: #ffffff">
+            <h1 class="title-shadow" style="color: #5bc0de">友情链接</h1>
+            <ul>
+                <li><a href="http://kangzw.com/">周康博客</a></li>
+                <li><a href="http://www.chenxiaojie.net/">陈骁杰博客</a></li>
+            </ul>
         </div>
     </div>
     </div>
 </div>
+<!--底部-->
 <div id="footer" class="col-xs-12  footer" align="center">
     <p >苏ICP备17022286号 | Design by JiangChao,version 1.0 | 登陆</p>
 </div>
