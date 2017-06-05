@@ -1,121 +1,206 @@
 /**
- * ueditor完整配置项
- * 可以在这里配置整个编辑器的特性
+ * ueditor锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+ * 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟洁辑锟斤拷锟斤拷锟斤拷锟斤拷
  */
-/**************************提示********************************
- * 所有被注释的配置项均为UEditor默认值。
- * 修改默认配置请首先确保已经完全明确该参数的真实用途。
- * 主要有两种修改方案，一种是取消此处注释，然后修改成对应参数；另一种是在实例化编辑器时传入对应参数。
- * 当升级编辑器时，可直接使用旧版配置文件替换新版配置文件,不用担心旧版配置文件中因缺少新功能所需的参数而导致脚本报错。
- **************************提示********************************/
+/**************************锟斤拷示********************************
+ * 锟斤拷锟叫憋拷注锟酵碉拷锟斤拷锟斤拷锟斤拷锟轿猆Editor默锟斤拷值锟斤拷
+ * 锟睫革拷默锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷确锟斤拷锟窖撅拷锟斤拷全锟斤拷确锟矫诧拷锟斤拷锟斤拷锟斤拷实锟斤拷途锟斤拷
+ * 锟斤拷要锟斤拷锟斤拷锟斤拷锟睫改凤拷锟斤拷锟斤拷一锟斤拷锟斤拷取锟斤拷锟剿达拷注锟酵ｏ拷然锟斤拷锟睫改成讹拷应锟斤拷锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷实锟斤拷锟斤拷锟洁辑锟斤拷时锟斤拷锟斤拷锟接︼拷锟斤拷锟斤拷锟?
+ * 锟斤拷锟斤拷锟斤拷锟洁辑锟斤拷时锟斤拷锟斤拷直锟斤拷使锟矫旧帮拷锟斤拷锟斤拷锟侥硷拷锟芥换锟铰帮拷锟斤拷锟斤拷锟侥硷拷,锟斤拷锟矫碉拷锟侥旧帮拷锟斤拷锟斤拷锟侥硷拷锟斤拷锟斤拷缺锟斤拷锟铰癸拷锟斤拷锟斤拷锟斤拷牟锟斤拷锟斤拷锟斤拷锟斤拷陆疟锟斤拷锟斤拷锟?
+ **************************锟斤拷示********************************/
 
 (function () {
 
     /**
-     * 编辑器资源文件根路径。它所表示的含义是：以编辑器实例化页面为当前路径，指向编辑器资源文件（即dialog等文件夹）的路径。
-     * 鉴于很多同学在使用编辑器的时候出现的种种路径问题，此处强烈建议大家使用"相对于网站根目录的相对路径"进行配置。
-     * "相对于网站根目录的相对路径"也就是以斜杠开头的形如"/myProject/ueditor/"这样的路径。
-     * 如果站点中有多个不在同一层级的页面需要实例化编辑器，且引用了同一UEditor的时候，此处的URL可能不适用于每个页面的编辑器。
-     * 因此，UEditor提供了针对不同页面的编辑器可单独配置的根路径，具体来说，在需要实例化编辑器的页面最顶部写上如下代码即可。当然，需要令此处的URL等于对应的配置。
+     * 锟洁辑锟斤拷锟斤拷源锟侥硷拷锟斤拷路锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷示锟侥猴拷锟斤拷锟角ｏ拷锟皆编辑锟斤拷实锟斤拷锟斤拷页锟斤拷为锟斤拷前路锟斤拷锟斤拷指锟斤拷嗉拷锟斤拷锟皆达拷募锟斤拷锟斤拷锟絛ialog锟斤拷锟侥硷拷锟叫ｏ拷锟斤拷路锟斤拷锟斤拷
+     * 锟斤拷锟节很讹拷同学锟斤拷使锟矫编辑锟斤拷锟斤拷时锟斤拷锟斤拷值锟斤拷锟斤拷锟铰凤拷锟斤拷锟斤拷猓拷舜锟角匡拷医锟斤拷锟斤拷锟绞癸拷锟?"锟斤拷锟斤拷锟斤拷锟秸撅拷锟侥柯硷拷锟斤拷锟斤拷路锟斤拷"锟斤拷锟斤拷锟斤拷锟矫★拷
+     * "锟斤拷锟斤拷锟斤拷锟秸撅拷锟侥柯硷拷锟斤拷锟斤拷路锟斤拷"也锟斤拷锟斤拷锟斤拷斜锟杰匡拷头锟斤拷锟斤拷锟斤拷"/myProject/ueditor/"锟斤拷锟斤拷锟斤拷路锟斤拷锟斤拷
+     * 锟斤拷锟秸撅拷锟斤拷锟斤拷卸锟斤拷锟斤拷锟斤拷同一锟姐级锟斤拷页锟斤拷锟斤拷要实锟斤拷锟斤拷锟洁辑锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷同一UEditor锟斤拷时锟津，此达拷锟斤拷URL锟斤拷锟杰诧拷锟斤拷锟斤拷锟斤拷每锟斤拷页锟斤拷谋嗉拷锟斤拷锟?
+     * 锟斤拷耍锟経Editor锟结供锟斤拷锟斤拷圆锟酵筹拷锟侥编辑锟斤拷锟缴碉拷锟斤拷锟斤拷锟矫的革拷路锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷说锟斤拷锟斤拷锟斤拷要实锟斤拷锟斤拷锟洁辑锟斤拷锟斤拷页锟斤拷锟筋顶锟斤拷写锟斤拷锟斤拷锟铰达拷锟诫即锟缴★拷锟斤拷然锟斤拷锟斤拷要锟斤拷舜锟斤拷锟経RL锟斤拷锟节讹拷应锟斤拷锟斤拷锟矫★拷
      * window.UEDITOR_HOME_URL = "/xxxx/xxxx/";
      */
     var URL = window.UEDITOR_HOME_URL || getUEBasePath();
 
     /**
-     * 配置项主体。注意，此处所有涉及到路径的配置别遗漏URL变量。
+     * 锟斤拷锟斤拷锟斤拷锟斤拷锟藉。注锟解，锟剿达拷锟斤拷锟斤拷锟芥及锟斤拷路锟斤拷锟斤拷锟斤拷锟矫憋拷锟斤拷漏URL锟斤拷锟斤拷锟斤拷
      */
     window.UEDITOR_CONFIG = {
 
-        //为编辑器实例添加一个路径，这个不能被注释
+        //为锟洁辑锟斤拷实锟斤拷锟斤拷锟揭伙拷锟铰凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟杰憋拷注锟斤拷
         UEDITOR_HOME_URL: URL
 
-        // 服务器统一请求接口路径
+        // 锟斤拷锟斤拷锟斤拷统一锟斤拷锟斤拷涌锟铰凤拷锟?
         , serverUrl: URL + "net/controller.ashx"
 
-        //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的从新定义
-        ,toolbars: [[
-            'undo', 'redo', '|',
-            'bold', 'forecolor', 'removeformat', 'autotypeset', 'pasteplain', '|', '|',
-            'justifyleft', 'justifycenter', '|', 
-            'link', 'unlink',  '|', 
-            'insertimage', 'insertvideo', '|',
-             'wordimage', '|',
-            'inserttable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'splittocells', '|', 'mybtn1','mydialog1'
-        ]]
-        //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
+        //锟斤拷锟斤拷锟斤拷锟较碉拷锟斤拷锟叫的癸拷锟杰帮拷钮锟斤拷锟斤拷锟斤拷锟津，匡拷锟斤拷锟斤拷new锟洁辑锟斤拷锟斤拷实锟斤拷时选锟斤拷锟皆硷拷锟斤拷要锟侥达拷锟铰讹拷锟斤拷
+        ,toolbars: [
+            [
+                'anchor', //锚点
+                'undo', //撤销
+                'redo', //重做
+                'bold', //加粗
+                'indent', //首行缩进
+                'snapscreen', //截图
+                'italic', //斜体
+                'underline', //下划线
+                'strikethrough', //删除线
+                'subscript', //下标
+                'fontborder', //字符边框
+                'superscript', //上标
+                'formatmatch', //格式刷
+                'source', //源代码
+                'blockquote', //引用
+                'pasteplain', //纯文本粘贴模式
+                'selectall', //全选
+                'print', //打印
+                'preview', //预览
+                'horizontal', //分隔线
+                'removeformat', //清除格式
+                'time', //时间
+                'date', //日期
+                'unlink', //取消链接
+                'insertrow', //前插入行
+                'insertcol', //前插入列
+                'mergeright', //右合并单元格
+                'mergedown', //下合并单元格
+                'deleterow', //删除行
+                'deletecol', //删除列
+                'splittorows', //拆分成行
+                'splittocols', //拆分成列
+                'splittocells', //完全拆分单元格
+                'deletecaption', //删除表格标题
+                'inserttitle', //插入标题
+                'mergecells', //合并多个单元格
+                'deletetable', //删除表格
+                'cleardoc', //清空文档
+                'insertparagraphbeforetable', //"表格前插入行"
+                'insertcode', //代码语言
+                'fontfamily', //字体
+                'fontsize', //字号
+                'paragraph', //段落格式
+                'simpleupload', //单图上传
+                'insertimage', //多图上传
+                'edittable', //表格属性
+                'edittd', //单元格属性
+                'link', //超链接
+                'emotion', //表情
+                'spechars', //特殊字符
+                'searchreplace', //查询替换
+                'map', //Baidu地图
+                'gmap', //Google地图
+                'insertvideo', //视频
+                'help', //帮助
+                'justifyleft', //居左对齐
+                'justifyright', //居右对齐
+                'justifycenter', //居中对齐
+                'justifyjustify', //两端对齐
+                'forecolor', //字体颜色
+                'backcolor', //背景色
+                'insertorderedlist', //有序列表
+                'insertunorderedlist', //无序列表
+                'fullscreen', //全屏
+                'directionalityltr', //从左向右输入
+                'directionalityrtl', //从右向左输入
+                'rowspacingtop', //段前距
+                'rowspacingbottom', //段后距
+                'pagebreak', //分页
+                'insertframe', //插入Iframe
+                'imagenone', //默认
+                'imageleft', //左浮动
+                'imageright', //右浮动
+                'attachment', //附件
+                'imagecenter', //居中
+                'wordimage', //图片转存
+                'lineheight', //行间距
+                'edittip ', //编辑提示
+                'customstyle', //自定义标题
+                'autotypeset', //自动排版
+                'webapp', //百度应用
+                'touppercase', //字母大写
+                'tolowercase', //字母小写
+                'background', //背景
+                'template', //模板
+                'scrawl', //涂鸦
+                'music', //音乐
+                'inserttable', //插入表格
+                'drafts', // 从草稿箱加载
+                'charts', // 图表
+            ]
+        ]
+        //锟斤拷锟斤拷锟斤拷锟节癸拷锟斤拷锟斤拷锟斤拷时锟斤拷示锟斤拷tooltip锟斤拷示,锟斤拷锟斤拷支锟斤拷锟皆讹拷锟斤拷锟斤拷锟斤拷锟斤拷锟矫ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷值为准
         ,labelMap:{
-            'mylable': '自定义按钮1','mydialog1':'自定义弹窗1'
+            'mylable': '锟皆讹拷锟藉按钮1','mydialog1':'锟皆讹拷锟藉弹锟斤拷1'
         }
 
-        //语言配置项,默认是zh-cn。有需要的话也可以使用如下这样的方式来自动多语言切换，当然，前提条件是lang文件夹下存在对应的语言文件：
-        //lang值也可以通过自动获取 (navigator.language||navigator.browserLanguage ||navigator.userLanguage).toLowerCase()
+        //锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷,默锟斤拷锟斤拷zh-cn锟斤拷锟斤拷锟斤拷要锟侥伙拷也锟斤拷锟斤拷使锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟侥凤拷式锟斤拷锟皆讹拷锟斤拷锟斤拷锟斤拷锟叫伙拷锟斤拷锟斤拷然锟斤拷前锟斤拷锟斤拷锟斤拷锟斤拷lang锟侥硷拷锟斤拷锟铰达拷锟节讹拷应锟斤拷锟斤拷锟斤拷锟侥硷拷锟斤拷
+        //lang值也锟斤拷锟斤拷通锟斤拷锟皆讹拷锟斤拷取 (navigator.language||navigator.browserLanguage ||navigator.userLanguage).toLowerCase()
         //,lang:"zh-cn"
         //,langPath:URL +"lang/"
 
-        //主题配置项,默认是default。有需要的话也可以使用如下这样的方式来自动多主题切换，当然，前提条件是themes文件夹下存在对应的主题文件：
-        //现有如下皮肤:default
+        //锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷,默锟斤拷锟斤拷default锟斤拷锟斤拷锟斤拷要锟侥伙拷也锟斤拷锟斤拷使锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟侥凤拷式锟斤拷锟皆讹拷锟斤拷锟斤拷锟斤拷锟叫伙拷锟斤拷锟斤拷然锟斤拷前锟斤拷锟斤拷锟斤拷锟斤拷themes锟侥硷拷锟斤拷锟铰达拷锟节讹拷应锟斤拷锟斤拷锟斤拷锟侥硷拷锟斤拷
+        //锟斤拷锟斤拷锟斤拷锟斤拷皮锟斤拷:default
         //,theme:'default'
         //,themePath:URL +"themes/"
 
-        //,zIndex : 900     //编辑器层级的基数,默认是900
+        //,zIndex : 900     //锟洁辑锟斤拷锟姐级锟侥伙拷锟斤拷,默锟斤拷锟斤拷900
 
-        //针对getAllHtml方法，会在对应的head标签中增加该编码设置。
+        //锟斤拷锟絞etAllHtml锟斤拷锟斤拷锟斤拷锟斤拷锟节讹拷应锟斤拷head锟斤拷签锟斤拷锟斤拷锟接该憋拷锟斤拷锟斤拷锟矫★拷
         //,charset:"gbk"
 
-        //若实例化编辑器的页面手动修改的domain，此处需要设置为true
+        //锟斤拷实锟斤拷锟斤拷锟洁辑锟斤拷锟斤拷页锟斤拷锟街讹拷锟睫改碉拷domain锟斤拷锟剿达拷锟斤拷要锟斤拷锟斤拷为true
         //,customDomain:false
 
-        //常用配置项目
-        //,isShow : true    //默认显示编辑器
+        //锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷目
+        //,isShow : true    //默锟斤拷锟斤拷示锟洁辑锟斤拷
 
-        //,textarea:'editorValue' // 提交表单时，服务器获取编辑器提交内容的所用的参数，多实例时可以给容器name属性，会将name给定的值最为每个实例的键值，不用每次实例化的时候都设置这个值
+        //,textarea:'editorValue' // 锟结交锟斤拷时锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷取锟洁辑锟斤拷锟结交锟斤拷锟捷碉拷锟斤拷锟矫的诧拷锟斤拷锟斤拷锟斤拷实锟斤拷时锟斤拷锟皆革拷锟斤拷锟斤拷name锟斤拷锟皆ｏ拷锟结将name锟斤拷锟斤拷锟斤拷值锟斤拷为每锟斤拷实锟斤拷锟侥硷拷值锟斤拷锟斤拷锟斤拷每锟斤拷实锟斤拷锟斤拷锟斤拷时锟斤拷锟斤拷锟斤拷锟斤拷锟街?
 
-        //,initialContent:'欢迎使用ueditor!'    //初始化编辑器的内容,也可以通过textarea/script给值，看官网例子
+        //,initialContent:'锟斤拷迎使锟斤拷ueditor!'    //锟斤拷始锟斤拷锟洁辑锟斤拷锟斤拷锟斤拷锟斤拷,也锟斤拷锟斤拷通锟斤拷textarea/script锟斤拷值锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
 
-        //,autoClearinitialContent:true //是否自动清除编辑器初始内容，注意：如果focus属性设置为true,这个也为真，那么编辑器一上来就会触发导致初始化的内容看不到了
+        //,autoClearinitialContent:true //锟角凤拷锟皆讹拷锟斤拷锟斤拷嗉拷锟斤拷锟绞硷拷锟斤拷荩锟阶拷猓猴拷锟斤拷focus锟斤拷锟斤拷锟斤拷锟斤拷为true,锟斤拷锟揭参拷妫拷锟矫达拷嗉拷锟揭伙拷锟斤拷锟斤拷突岽ワ拷锟斤拷锟斤拷鲁锟绞硷拷锟斤拷锟斤拷锟斤拷菘锟斤拷锟斤拷锟斤拷锟?
 
-        //,focus:false //初始化时，是否让编辑器获得焦点true或false
+        //,focus:false //锟斤拷始锟斤拷时锟斤拷锟角凤拷锟矫编辑锟斤拷锟斤拷媒锟斤拷锟絫rue锟斤拷false
 
-        //如果自定义，最好给p标签如下的行高，要不输入中文时，会有跳动感
-        //,initialStyle:'p{line-height:1em}'//编辑器层级的基数,可以用来改变字体等
+        //锟斤拷锟斤拷远锟斤拷澹拷锟矫革拷p锟斤拷签锟斤拷锟铰碉拷锟叫高ｏ拷要锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷时锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+        //,initialStyle:'p{line-height:1em}'//锟洁辑锟斤拷锟姐级锟侥伙拷锟斤拷,锟斤拷锟斤拷锟斤拷锟斤拷锟侥憋拷锟斤拷锟斤拷锟?
 
-        //,iframeCssUrl: URL + '/themes/iframe.css' //给编辑器内部引入一个css文件
+        //,iframeCssUrl: URL + '/themes/iframe.css' //锟斤拷锟洁辑锟斤拷锟节诧拷锟斤拷锟斤拷一锟斤拷css锟侥硷拷
 
         //indentValue
-        //首行缩进距离,默认是2em
+        //锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷,默锟斤拷锟斤拷2em
         //,indentValue:'2em'
 
-        //,initialFrameWidth:1000  //初始化编辑器宽度,默认1000
-        //,initialFrameHeight:320  //初始化编辑器高度,默认320
+        //,initialFrameWidth:1000  //锟斤拷始锟斤拷锟洁辑锟斤拷锟斤拷锟?,默锟斤拷1000
+        //,initialFrameHeight:320  //锟斤拷始锟斤拷锟洁辑锟斤拷锟竭讹拷,默锟斤拷320
 
-        //,readonly : false //编辑器初始化结束后,编辑区域是否是只读的，默认是false
+        //,readonly : false //锟洁辑锟斤拷锟斤拷始锟斤拷锟斤拷锟斤拷锟斤拷,锟洁辑锟斤拷锟斤拷锟角凤拷锟斤拷只锟斤拷锟侥ｏ拷默锟斤拷锟斤拷false
 
-        //,autoClearEmptyNode : true //getContent时，是否删除空的inlineElement节点（包括嵌套的情况）
+        //,autoClearEmptyNode : true //getContent时锟斤拷锟角凤拷删锟斤拷锟秸碉拷inlineElement锟节点（锟斤拷锟斤拷嵌锟阶碉拷锟斤拷锟斤拷锟?
 
-        //启用自动保存
+        //锟斤拷锟斤拷锟皆讹拷锟斤拷锟斤拷
         //,enableAutoSave: true
-        //自动保存间隔时间， 单位ms
+        //锟皆讹拷锟斤拷锟斤拷锟斤拷时锟戒， 锟斤拷位ms
         //,saveInterval: 500
 
-        //,fullscreen : false //是否开启初始化时即全屏，默认关闭
+        //,fullscreen : false //锟角凤拷锟斤拷锟斤拷始锟斤拷时锟斤拷全锟斤拷锟斤拷默锟较关憋拷
 
-        //,imagePopup:true      //图片操作的浮层开关，默认打开
+        //,imagePopup:true      //图片锟斤拷锟斤拷锟侥革拷锟姐开锟截ｏ拷默锟较达拷
 
-        //,autoSyncData:true //自动同步编辑器要提交的数据
-        //,emotionLocalization:false //是否开启表情本地化，默认关闭。若要开启请确保emotion文件夹下包含官网提供的images表情文件夹
+        //,autoSyncData:true //锟皆讹拷同锟斤拷锟洁辑锟斤拷要锟结交锟斤拷锟斤拷锟斤拷
+        //,emotionLocalization:false //锟角凤拷锟斤拷锟斤拷锟介本锟截伙拷锟斤拷默锟较关闭★拷锟斤拷要锟斤拷锟斤拷锟斤拷确锟斤拷emotion锟侥硷拷锟斤拷锟铰帮拷锟斤拷锟斤拷锟斤拷锟结供锟斤拷images锟斤拷锟斤拷锟侥硷拷锟斤拷
 
-        //粘贴只保留标签，去除标签所有属性
+        //粘锟斤拷只锟斤拷锟斤拷锟斤拷签锟斤拷去锟斤拷锟斤拷签锟斤拷锟斤拷锟斤拷锟斤拷
         ,retainOnlyLabelPasted: true
 
-        ,pasteplain:true  //是否默认为纯文本粘贴。false为不使用纯文本粘贴，true为使用纯文本粘贴
-        //纯文本粘贴模式下的过滤规则
+        ,pasteplain:true  //锟角凤拷默锟斤拷为锟斤拷锟侥憋拷粘锟斤拷锟斤拷false为锟斤拷使锟矫达拷锟侥憋拷粘锟斤拷锟斤拷true为使锟矫达拷锟侥憋拷粘锟斤拷
+        //锟斤拷锟侥憋拷粘锟斤拷模式锟铰的癸拷锟剿癸拷锟斤拷
         //'filterTxtRules' : function(){
         //    function transP(node){
         //        node.tagName = 'p';
         //        node.setStyle();
         //    }
         //    return {
-        //        //直接删除及其字节点内容
+        //        //直锟斤拷删锟斤拷锟斤拷锟斤拷锟街节碉拷锟斤拷锟斤拷
         //        '-' : 'script style object iframe embed input select',
         //        'p': {$:{}},
         //        'br':{$:{}},
@@ -126,7 +211,7 @@
         //        'tr':transP,
         //        'h1':transP,'h2':transP,'h3':transP,'h4':transP,'h5':transP,'h6':transP,
         //        'td':function(node){
-        //            //没有内容的td直接删掉
+        //            //没锟斤拷锟斤拷锟捷碉拷td直锟斤拷删锟斤拷
         //            var txt = !!node.innerText();
         //            if(txt){
         //                node.parentNode.insertAfter(UE.uNode.createText(' &nbsp; &nbsp;'),node);
@@ -136,19 +221,19 @@
         //    }
         //}()
 
-        ,allHtmlEnabled:false //提交到后台的数据是否包含整个html字符串
+        ,allHtmlEnabled:false //锟结交锟斤拷锟斤拷台锟斤拷锟斤拷锟斤拷锟角凤拷锟斤拷锟斤拷锟斤拷锟絟tml锟街凤拷锟斤拷
 
         //insertorderedlist
-        //有序列表的下拉配置,值留空时支持多语言自动识别，若配置值，则以此值为准
+        //锟斤拷锟斤拷锟叫憋拷锟斤拷锟斤拷锟斤拷锟斤拷锟?,值锟斤拷锟斤拷时支锟街讹拷锟斤拷锟斤拷锟皆讹拷识锟斤拷锟斤拷锟斤拷锟斤拷值锟斤拷锟斤拷锟皆达拷值为准
         //,'insertorderedlist':{
-        //      //自定的样式
+        //      //锟皆讹拷锟斤拷锟斤拷式
         //        'num':'1,2,3...',
         //        'num1':'1),2),3)...',
         //        'num2':'(1),(2),(3)...',
-        //        'cn':'一,二,三....',
-        //        'cn1':'一),二),三)....',
-        //        'cn2':'(一),(二),(三)....',
-        //     //系统自带
+        //        'cn':'一,锟斤拷,锟斤拷....',
+        //        'cn1':'一),锟斤拷),锟斤拷)....',
+        //        'cn2':'(一),(锟斤拷),(锟斤拷)....',
+        //     //系统锟皆达拷
         //     'decimal' : '' ,         //'1,2,3...'
         //     'lower-alpha' : '' ,    // 'a,b,c...'
         //     'lower-roman' : '' ,    //'i,ii,iii...'
@@ -157,28 +242,28 @@
         //}
 
         //insertunorderedlist
-        //无序列表的下拉配置，值留空时支持多语言自动识别，若配置值，则以此值为准
-        //,insertunorderedlist : { //自定的样式
-        //    'dash' :'— 破折号', //-破折号
-        //    'dot':' 。 小圆圈', //系统自带
-        //    'circle' : '',  // '○ 小圆圈'
-        //    'disc' : '',    // '● 小圆点'
-        //    'square' : ''   //'■ 小方块'
+        //锟斤拷锟斤拷锟叫憋拷锟斤拷锟斤拷锟斤拷锟斤拷茫锟街碉拷锟斤拷锟绞敝э拷侄锟斤拷锟斤拷锟斤拷远锟绞讹拷锟斤拷锟斤拷锟斤拷锟街碉拷锟斤拷锟斤拷源锟街滴?
+        //,insertunorderedlist : { //锟皆讹拷锟斤拷锟斤拷式
+        //    'dash' :'锟斤拷 锟斤拷锟桔猴拷', //-锟斤拷锟桔猴拷
+        //    'dot':' 锟斤拷 小圆圈', //系统锟皆达拷
+        //    'circle' : '',  // '锟斤拷 小圆圈'
+        //    'disc' : '',    // '锟斤拷 小圆锟斤拷'
+        //    'square' : ''   //'锟斤拷 小锟斤拷锟斤拷'
         //}
-        //,listDefaultPaddingLeft : '30'//默认的左边缩进的基数倍
-        //,listiconpath : 'http://bs.baidu.com/listicon/'//自定义标号的路径
-        //,maxListLevel : 3 //限制可以tab的级数, 设置-1为不限制
+        //,listDefaultPaddingLeft : '30'//默锟较碉拷锟斤拷锟斤拷锟斤拷锟斤拷幕锟斤拷锟斤拷锟?
+        //,listiconpath : 'http://bs.baidu.com/listicon/'//锟皆讹拷锟斤拷锟脚碉拷路锟斤拷
+        //,maxListLevel : 3 //锟斤拷锟狡匡拷锟斤拷tab锟侥硷拷锟斤拷, 锟斤拷锟斤拷-1为锟斤拷锟斤拷锟斤拷
 
-        //,autoTransWordToList:false  //禁止word中粘贴进来的列表自动变成列表标签
+        //,autoTransWordToList:false  //锟斤拷止word锟斤拷粘锟斤拷锟斤拷锟斤拷锟斤拷锟叫憋拷锟皆讹拷锟斤拷锟斤拷斜锟斤拷签
 
         //fontfamily
-        //字体设置 label留空支持多语言自动切换，若配置，则以配置值为准
+        //锟斤拷锟斤拷锟斤拷锟斤拷 label锟斤拷锟斤拷支锟街讹拷锟斤拷锟斤拷锟皆讹拷锟叫伙拷锟斤拷锟斤拷锟斤拷锟矫ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷值为准
         //,'fontfamily':[
-        //    { label:'',name:'songti',val:'宋体,SimSun'},
-        //    { label:'',name:'kaiti',val:'楷体,楷体_GB2312, SimKai'},
-        //    { label:'',name:'yahei',val:'微软雅黑,Microsoft YaHei'},
-        //    { label:'',name:'heiti',val:'黑体, SimHei'},
-        //    { label:'',name:'lishu',val:'隶书, SimLi'},
+        //    { label:'',name:'songti',val:'锟斤拷锟斤拷,SimSun'},
+        //    { label:'',name:'kaiti',val:'锟斤拷锟斤拷,锟斤拷锟斤拷_GB2312, SimKai'},
+        //    { label:'',name:'yahei',val:'微锟斤拷锟脚猴拷,Microsoft YaHei'},
+        //    { label:'',name:'heiti',val:'锟斤拷锟斤拷, SimHei'},
+        //    { label:'',name:'lishu',val:'锟斤拷锟斤拷, SimLi'},
         //    { label:'',name:'andaleMono',val:'andale mono'},
         //    { label:'',name:'arial',val:'arial, helvetica,sans-serif'},
         //    { label:'',name:'arialBlack',val:'arial black,avant garde'},
@@ -188,34 +273,34 @@
         //]
 
         //fontsize
-        //字号
+        //锟街猴拷
         //,'fontsize':[10, 11, 12, 14, 16, 18, 20, 24, 36]
 
         //paragraph
-        //段落格式 值留空时支持多语言自动识别，若配置，则以配置值为准
+        //锟斤拷锟斤拷锟绞? 值锟斤拷锟斤拷时支锟街讹拷锟斤拷锟斤拷锟皆讹拷识锟斤拷锟斤拷锟斤拷锟矫ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷值为准
         //,'paragraph':{'p':'', 'h1':'', 'h2':'', 'h3':'', 'h4':'', 'h5':'', 'h6':''}
 
         //rowspacingtop
-        //段间距 值和显示的名字相同
+        //锟轿硷拷锟? 值锟斤拷锟斤拷示锟斤拷锟斤拷锟斤拷锟斤拷同
         //,'rowspacingtop':['5', '10', '15', '20', '25']
 
         //rowspacingBottom
-        //段间距 值和显示的名字相同
+        //锟轿硷拷锟? 值锟斤拷锟斤拷示锟斤拷锟斤拷锟斤拷锟斤拷同
         //,'rowspacingbottom':['5', '10', '15', '20', '25']
 
         //lineheight
-        //行内间距 值和显示的名字相同
+        //锟斤拷锟节硷拷锟? 值锟斤拷锟斤拷示锟斤拷锟斤拷锟斤拷锟斤拷同
         //,'lineheight':['1', '1.5','1.75','2', '3', '4', '5']
 
         //customstyle
-        //自定义样式，不支持国际化，此处配置值即可最后显示值
-        //block的元素是依据设置段落的逻辑设置的，inline的元素依据BIU的逻辑设置
-        //尽量使用一些常用的标签
-        //参数说明
-        //tag 使用的标签名字
-        //label 显示的名字也是用来标识不同类型的标识符，注意这个值每个要不同，
-        //style 添加的样式
-        //每一个对象就是一个自定义的样式
+        //锟皆讹拷锟斤拷锟斤拷式锟斤拷锟斤拷支锟街癸拷锟绞伙拷锟斤拷锟剿达拷锟斤拷锟斤拷值锟斤拷锟斤拷锟斤拷锟斤拷锟绞局?
+        //block锟斤拷元锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟矫讹拷锟斤拷锟斤拷呒锟斤拷锟斤拷玫模锟絠nline锟斤拷元锟斤拷锟斤拷锟斤拷BIU锟斤拷锟竭硷拷锟斤拷锟斤拷
+        //锟斤拷锟斤拷使锟斤拷一些锟斤拷锟矫的憋拷签
+        //锟斤拷锟斤拷说锟斤拷
+        //tag 使锟矫的憋拷签锟斤拷锟斤拷
+        //label 锟斤拷示锟斤拷锟斤拷锟斤拷也锟斤拷锟斤拷锟斤拷锟斤拷识锟斤拷同锟斤拷锟酵的憋拷识锟斤拷锟斤拷注锟斤拷锟斤拷锟街得匡拷锟揭拷锟酵拷锟?
+        //style 锟斤拷拥锟斤拷锟绞?
+        //每一锟斤拷锟斤拷锟斤拷锟斤拷锟揭伙拷锟斤拷远锟斤拷锟斤拷锟斤拷式
         //,'customstyle':[
         //    {tag:'h1', name:'tc', label:'', style:'border-bottom:#ccc 2px solid;padding:0 4px 0 0;text-align:center;margin:0 0 20px 0;'},
         //    {tag:'h1', name:'tl',label:'', style:'border-bottom:#ccc 2px solid;padding:0 4px 0 0;margin:0 0 10px 0;'},
@@ -223,123 +308,123 @@
         //    {tag:'span',name:'hi', label:'', style:'font-style:italic;font-weight:bold;color:rgb(51, 153, 204)'}
         //]
 
-        //打开右键菜单功能
+        //锟斤拷锟揭硷拷锟剿碉拷锟斤拷锟斤拷
         //,enableContextMenu: true
-        //右键菜单的内容，可以参考plugins/contextmenu.js里边的默认菜单的例子，label留空支持国际化，否则以此配置为准
+        //锟揭硷拷锟剿碉拷锟斤拷锟斤拷锟捷ｏ拷锟斤拷锟皆参匡拷plugins/contextmenu.js锟斤拷叩锟侥拷喜说锟斤拷锟斤拷锟斤拷樱锟絣abel锟斤拷锟斤拷支锟街癸拷锟绞伙拷锟斤拷锟斤拷锟斤拷锟皆达拷锟斤拷锟斤拷为准
         //,contextMenu:[
         //    {
-        //        label:'',       //显示的名称
-        //        cmdName:'selectall',//执行的command命令，当点击这个右键菜单时
-        //        //exec可选，有了exec就会在点击时执行这个function，优先级高于cmdName
+        //        label:'',       //锟斤拷示锟斤拷锟斤拷锟斤拷
+        //        cmdName:'selectall',//执锟叫碉拷command锟斤拷锟筋，锟斤拷锟斤拷锟斤拷锟斤拷锟揭硷拷锟剿碉拷时
+        //        //exec锟斤拷选锟斤拷锟斤拷锟斤拷exec锟酵伙拷锟节碉拷锟绞敝达拷锟斤拷锟斤拷function锟斤拷锟斤拷锟饺硷拷锟斤拷锟斤拷cmdName
         //        exec:function () {
-        //            //this是当前编辑器的实例
+        //            //this锟角碉拷前锟洁辑锟斤拷锟斤拷实锟斤拷
         //            //this.ui._dialogs['inserttableDialog'].open();
         //        }
         //    }
         //]
 
-        //快捷菜单
+        //锟斤拷莶说锟?
         //,shortcutMenu:["fontfamily", "fontsize", "bold", "italic", "underline", "forecolor", "backcolor", "insertorderedlist", "insertunorderedlist"]
 
         //elementPathEnabled
-        //是否启用元素路径，默认是显示
+        //锟角凤拷锟斤拷锟斤拷元锟斤拷路锟斤拷锟斤拷默锟斤拷锟斤拷锟斤拷示
         ,elementPathEnabled : false
 
         //wordCount
-        ,wordCount:false          //是否开启字数统计
-        //,maximumWords:10000       //允许的最大字符数
-        //字数统计提示，{#count}代表当前字数，{#leave}代表还可以输入多少字符数,留空支持多语言自动切换，否则按此配置显示
-        //,wordCountMsg:''   //当前已输入 {#count} 个字符，您还可以输入{#leave} 个字符
-        //超出字数限制提示  留空支持多语言自动切换，否则按此配置显示
-        //,wordOverFlowMsg:''    //<span style="color:red;">你输入的字符个数已经超出最大允许值，服务器可能会拒绝保存！</span>
+        ,wordCount:false          //锟角凤拷锟斤拷锟斤拷锟斤拷统锟斤拷
+        //,maximumWords:10000       //锟斤拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷
+        //锟斤拷锟斤拷统锟斤拷锟斤拷示锟斤拷{#count}锟斤拷锟斤拷前锟斤拷锟斤拷锟斤拷{#leave}锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷址锟斤拷锟?,锟斤拷锟斤拷支锟街讹拷锟斤拷锟斤拷锟皆讹拷锟叫伙拷锟斤拷锟斤拷锟津按达拷锟斤拷锟斤拷锟斤拷示
+        //,wordCountMsg:''   //锟斤拷前锟斤拷锟斤拷锟斤拷 {#count} 锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷{#leave} 锟斤拷锟街凤拷
+        //锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷示  锟斤拷锟斤拷支锟街讹拷锟斤拷锟斤拷锟皆讹拷锟叫伙拷锟斤拷锟斤拷锟津按达拷锟斤拷锟斤拷锟斤拷示
+        //,wordOverFlowMsg:''    //<span style="color:red;">锟斤拷锟斤拷锟斤拷锟斤拷址锟斤拷锟斤拷锟斤拷丫锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷值锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟杰伙拷芫锟斤拷锟斤拷妫?</span>
 
         //tab
-        //点击tab键时移动的距离,tabSize倍数，tabNode什么字符做为单位
+        //锟斤拷锟絫ab锟斤拷时锟狡讹拷锟侥撅拷锟斤拷,tabSize锟斤拷锟斤拷锟斤拷tabNode什么锟街凤拷锟斤拷为锟斤拷位
         //,tabSize:4
         //,tabNode:'&nbsp;'
 
         //removeFormat
-        //清除格式时可以删除的标签和属性
-        //removeForamtTags标签
+        //锟斤拷锟斤拷锟绞绞憋拷锟斤拷锟缴撅拷锟斤拷谋锟角╋拷锟斤拷锟斤拷锟?
+        //removeForamtTags锟斤拷签
         //,removeFormatTags:'b,big,code,del,dfn,em,font,i,ins,kbd,q,samp,small,span,strike,strong,sub,sup,tt,u,var'
-        //removeFormatAttributes属性
+        //removeFormatAttributes锟斤拷锟斤拷
         //,removeFormatAttributes:'class,style,lang,width,height,align,hspace,valign'
 
         //undo
-        //可以最多回退的次数,默认20
+        //锟斤拷锟斤拷锟斤拷锟斤拷锟剿的达拷锟斤拷,默锟斤拷20
         //,maxUndoCount:20
-        //当输入的字符数超过该值时，保存一次现场
+        //锟斤拷锟斤拷锟斤拷锟斤拷址锟斤拷锟斤拷锟斤拷锟斤拷锟街凳憋拷锟斤拷锟斤拷锟揭伙拷锟斤拷殖锟?
         //,maxInputCount:1
 
         //autoHeightEnabled
-        // 是否自动长高,默认true
+        // 锟角凤拷锟皆讹拷锟斤拷锟斤拷,默锟斤拷true
         //,autoHeightEnabled:true
 
         //scaleEnabled
-        //是否可以拉伸长高,默认true(当开启时，自动长高失效)
+        //锟角凤拷锟斤拷锟斤拷锟斤拷斐わ拷锟?,默锟斤拷true(锟斤拷锟斤拷锟斤拷时锟斤拷锟皆讹拷锟斤拷锟斤拷失效)
         //,scaleEnabled:false
-        //,minFrameWidth:800    //编辑器拖动时最小宽度,默认800
-        //,minFrameHeight:220  //编辑器拖动时最小高度,默认220
+        //,minFrameWidth:800    //锟洁辑锟斤拷锟较讹拷时锟斤拷小锟斤拷锟?,默锟斤拷800
+        //,minFrameHeight:220  //锟洁辑锟斤拷锟较讹拷时锟斤拷小锟竭讹拷,默锟斤拷220
 
         //autoFloatEnabled
-        //是否保持toolbar的位置不动,默认true
+        //锟角否保筹拷toolbar锟斤拷位锟矫诧拷锟斤拷,默锟斤拷true
         //,autoFloatEnabled:true
-        //浮动时工具栏距离浏览器顶部的高度，用于某些具有固定头部的页面
+        //锟斤拷锟斤拷时锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷母叨龋锟斤拷锟斤拷锟侥承╋拷锟斤拷泄潭锟酵凤拷锟斤拷锟揭筹拷锟?
         //,topOffset:30
-        //编辑器底部距离工具栏高度(如果参数大于等于编辑器高度，则设置无效)
+        //锟洁辑锟斤拷锟阶诧拷锟斤拷锟诫工锟斤拷锟斤拷锟竭讹拷(锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷诘锟斤拷诒嗉拷锟斤拷叨龋锟斤拷锟斤拷锟斤拷锟斤拷锟叫?)
         //,toolbarTopOffset:400
 
         //pageBreakTag
-        //分页标识符,默认是_ueditor_page_break_tag_
+        //锟斤拷页锟斤拷识锟斤拷,默锟斤拷锟斤拷_ueditor_page_break_tag_
         //,pageBreakTag:'_ueditor_page_break_tag_'
 
         //autotypeset
-        //自动排版参数
+        //锟皆讹拷锟脚帮拷锟斤拷锟?
         ,autotypeset: {
-            mergeEmptyline: true,           //合并空行
-            removeClass: true,              //去掉冗余的class
-            removeEmptyline: false,         //去掉空行
-            textAlign:"left",               //段落的排版方式，可以是 left,right,center,justify 去掉这个属性表示不执行排版
-            //imageBlockLine: 'center',       //图片的浮动方式，独占一行剧中,左右浮动，默认: center,left,right,none 去掉这个属性表示不执行排版
-            pasteFilter: false,             //根据规则过滤没事粘贴进来的内容
-            clearFontSize: false,           //去掉所有的内嵌字号，使用编辑器默认的字号
-            clearFontFamily: false,         //去掉所有的内嵌字体，使用编辑器默认的字体
-            removeEmptyNode: false,         // 去掉空节点
-            //可以去掉的标签
-            removeTagNames: {标签名字:1},
-            indent: true,                  // 行首缩进
-            indentValue : '2em',            //行首缩进的大小
-            bdc2sb: false,
-            tobdc: false
-        }
+            mergeEmptyline: true,           //锟较诧拷锟斤拷锟斤拷
+            removeClass: true,              //去锟斤拷锟斤拷锟斤拷锟絚lass
+            removeEmptyline: false,         //去锟斤拷锟斤拷锟斤拷
+            textAlign:"left",               //锟斤拷锟斤拷锟斤拷虐娣绞斤拷锟斤拷锟斤拷锟斤拷锟? left,right,center,justify 去锟斤拷锟斤拷锟斤拷锟斤拷员锟绞撅拷锟街达拷锟斤拷虐锟?
+            //imageBlockLine: 'center',       //图片锟侥革拷锟斤拷锟斤拷式锟斤拷锟斤拷占一锟叫撅拷锟斤拷,锟斤拷锟揭革拷锟斤拷锟斤拷默锟斤拷: center,left,right,none 去锟斤拷锟斤拷锟斤拷锟斤拷员锟绞撅拷锟街达拷锟斤拷虐锟?
+            pasteFilter: false,             //锟斤拷锟捷癸拷锟斤拷锟斤拷锟矫伙拷锟秸筹拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟?
+            clearFontSize: false,           //去锟斤拷锟斤拷锟叫碉拷锟斤拷嵌锟街号ｏ拷使锟矫编辑锟斤拷默锟较碉拷锟街猴拷
+            clearFontFamily: false,         //去锟斤拷锟斤拷锟叫碉拷锟斤拷嵌锟斤拷锟藉，使锟矫编辑锟斤拷默锟较碉拷锟斤拷锟斤拷
+            removeEmptyNode: false,         // 去锟斤拷锟秸节碉拷
+            //锟斤拷锟斤拷去锟斤拷锟侥憋拷签
+            removeTagNames: {锟斤拷签锟斤拷锟斤拷:1},
+    indent: true,                  // 锟斤拷锟斤拷锟斤拷锟斤拷
+        indentValue : '2em',            //锟斤拷锟斤拷锟斤拷锟斤拷锟侥达拷小
+        bdc2sb: false,
+        tobdc: false
+}
 
-        //tableDragable
-        //表格是否可以拖拽
-        //,tableDragable: true
+    //tableDragable
+    //锟斤拷锟斤拷欠锟斤拷锟斤拷锟斤拷拽
+    //,tableDragable: true
 
-        //,disabledTableInTable:true  //禁止表格嵌套
+    //,disabledTableInTable:true  //锟斤拷止锟斤拷锟角讹拷锟?
 
-        //sourceEditor
-        //源码的查看方式,codemirror 是代码高亮，textarea是文本框,默认是codemirror
-        //注意默认codemirror只能在ie8+和非ie中使用
-        //,sourceEditor:"codemirror"
-        //如果sourceEditor是codemirror，还用配置一下两个参数
-        //codeMirrorJsUrl js加载的路径，默认是 URL + "third-party/codemirror/codemirror.js"
-        //,codeMirrorJsUrl:URL + "third-party/codemirror/codemirror.js"
-        //codeMirrorCssUrl css加载的路径，默认是 URL + "third-party/codemirror/codemirror.css"
-        //,codeMirrorCssUrl:URL + "third-party/codemirror/codemirror.css"
-        //编辑器初始化完成后是否进入源码模式，默认为否。
-        //,sourceEditorFirst:false
+    //sourceEditor
+    //源锟斤拷牟榭达拷锟绞?,codemirror 锟角达拷锟斤拷锟斤拷锟斤拷锟絫extarea锟斤拷锟侥憋拷锟斤拷,默锟斤拷锟斤拷codemirror
+    //注锟斤拷默锟斤拷codemirror只锟斤拷锟斤拷ie8+锟酵凤拷ie锟斤拷使锟斤拷
+    //,sourceEditor:"codemirror"
+    //锟斤拷锟絪ourceEditor锟斤拷codemirror锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+    //codeMirrorJsUrl js锟斤拷锟截碉拷路锟斤拷锟斤拷默锟斤拷锟斤拷 URL + "third-party/codemirror/codemirror.js"
+    //,codeMirrorJsUrl:URL + "third-party/codemirror/codemirror.js"
+    //codeMirrorCssUrl css锟斤拷锟截碉拷路锟斤拷锟斤拷默锟斤拷锟斤拷 URL + "third-party/codemirror/codemirror.css"
+    //,codeMirrorCssUrl:URL + "third-party/codemirror/codemirror.css"
+    //锟洁辑锟斤拷锟斤拷始锟斤拷锟斤拷珊锟斤拷欠锟斤拷锟斤拷源锟斤拷模式锟斤拷默锟斤拷为锟斤拷
+    //,sourceEditorFirst:false
 
-        //iframeUrlMap
-        //dialog内容的路径 ～会被替换成URL,垓属性一旦打开，将覆盖所有的dialog的默认路径
-        //,iframeUrlMap:{
-        //    'anchor':'~/dialogs/anchor/anchor.html',
-        //}
+    //iframeUrlMap
+    //dialog锟斤拷锟捷碉拷路锟斤拷 锟斤拷锟结被锟芥换锟斤拷URL,锟斤拷锟斤拷锟斤拷一锟斤拷锟津开ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫碉拷dialog锟斤拷默锟斤拷路锟斤拷
+    //,iframeUrlMap:{
+    //    'anchor':'~/dialogs/anchor/anchor.html',
+    //}
 
-        //webAppKey 百度应用的APIkey，每个站长必须首先去百度官网注册一个key后方能正常使用app功能，注册介绍，http://app.baidu.com/static/cms/getapikey.html
-        //, webAppKey: ""
-    };
+    //webAppKey 锟劫讹拷应锟矫碉拷APIkey锟斤拷每锟斤拷站锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷去锟劫度癸拷锟斤拷注锟斤拷一锟斤拷key锟斤拷锟斤拷锟斤拷锟斤拷使锟斤拷app锟斤拷锟杰ｏ拷注锟斤拷锟斤拷埽锟絟ttp://app.baidu.com/static/cms/getapikey.html
+    //, webAppKey: ""
+};
 
     function getUEBasePath(docUrl, confUrl) {
 

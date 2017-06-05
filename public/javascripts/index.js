@@ -10,7 +10,7 @@ $(document).ready(function () {
             $(v).bind('click',function(){
                 var url=$($(v ).children('a').get(0)).attr('menu-url');
                 $('#mainPage').load(url);
-                console.log(1);
+
                 $('.navbar-nav li ').each(function (m, b) {
                     $(b).removeClass('active');
                 })

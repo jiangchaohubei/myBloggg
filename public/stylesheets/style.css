@@ -180,3 +180,14 @@ figure {
   top:30%;
   position:relative
 }
+.input_btn_1 {
+  width: auto;
+  height: 30px;
+  padding: 0 15px;
+  border: none;
+  background-color: #0066cc;
+  color: #fff;
+  font: bold 12px/30px Arial, Helvetica, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}

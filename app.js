@@ -7,6 +7,10 @@ var bodyParser = require('body-parser');
 
 var app = express();
 var routerConfig=require('./routesConfig');
+
+//初始化数据库
+var acl=require('./mongodb/acl');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
