@@ -23,7 +23,7 @@ a {
   padding:0px;
 }
 .main .box-right .content-category ul li{
-  width:125px;
+  width:110px;
   float:left;
   margin: 5px;
   background-color: #9acfea;
@@ -57,7 +57,7 @@ a {
   height:40px;
 }
 .main .box-right .hot-sort .list{
-  width: 277.5px;
+  width: 360px;
   overflow: hidden;
   float: left;
 }
@@ -65,7 +65,7 @@ a {
   height: 35px;
   line-height: 35px;
   padding-left: 28px;
-  width: 277.5px;
+  width: 360px;
   border-bottom: 1px solid #cecece;
 
 }
@@ -123,11 +123,11 @@ a {
   background-size:cover;
 }
 .box-left{
-  width:750px;
+  width:1000px;
   float: left;
 }
 .box-right{
-  float: left;
+  float: right;
 }
 h2.title-home{
   font: 24px "微软雅黑", Arial, Helvetica, sans-serif;
@@ -143,8 +143,8 @@ figure {
 }
 .dateview {
   width: 400px;
-  bottom: -55px;
-  position:relative;
+  margin-bottom: 0px;
+
   background: #f6f6f6 url(../images/time.jpg) 15px center no-repeat;
   line-height: 26px;
   height: 26px;
@@ -152,17 +152,19 @@ figure {
   padding-left: 40px;
 }
 .article{
-  height:250px;
+  height:220px;
+  width:800px;
+  margin-top: 10px;
   background-color: #ffffff;
 }
-.article :hover{
+div.article :hover{
   box-shadow: #555555 5px 5px 5px;
 }
 .left {
   float: left;
 }
 .right {
-  float: right;
+  float: left;
 }
 .footer{
   background-color:#efefef;
@@ -190,4 +192,7 @@ figure {
   font: bold 12px/30px Arial, Helvetica, sans-serif;
   text-align: center;
   cursor: pointer;
+}
+.container{
+  width:1500px!important;
 }

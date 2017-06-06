@@ -1,23 +1,23 @@
 
 <div class="panel-body" style="height:auto;padding: 0px">
-    <form id="formSearch"  class="form" style="margin:0;display:block">
+    <form id="writeArticleForm"  class="form"   style="margin:0;display:block">
         <div class="row col-xs-12">
             <h3 class="row col-xs-2">文章标题：</h3>
             <div class=" col-xs-10">
-                &nbsp;<input type="text" class="form-control" style="height:25px" id="" name="">
+                &nbsp;<input type="text" class="form-control" style="height:25px" id="" name="title">
             </div>
         </div>
         <div class="row col-xs-12">
             <h3 class="row col-xs-2">检索标签：</h3>
             <div class=" col-xs-10 " style="height: 56.4px">
-                &nbsp;<input type="text" class="" style="width:100px;height:25px;top: 30%;position: relative" id="" name="" placeholder="标签">
+                &nbsp;<input type="text" class="" style="width:100px;height:25px;top: 30%;position: relative" id="" name="tag" placeholder="标签">
                 <input type="button" style="width:50px;height:25px;top: 30%;position: relative" value="添加">
             </div>
         </div>
         <div class="row col-xs-12">
             <h3 class="row col-xs-2">文章分类：</h3>
             <div class=" col-xs-10 " style="height: 56.4px">
-                <select class="select from-control" style="width:100px;height:25px;top: 30%;position: relative">
+                <select class="select from-control" style="width:100px;height:25px;top: 30%;position: relative" name="classify">
                     <option value="">--请选择--</option>
                     <option value="java">java</option>
                     <option value="nodejs">nodejs</option>
@@ -30,9 +30,9 @@
         <div class="row col-xs-12">
             <h3 class="row col-xs-2">是否原创：</h3>
             <div class=" col-xs-10 " style="height: 56.4px">
-                <input class="" type="radio" style="height:20px;top: 30%;position: relative" id="" name="copyright" value="yes"> <span class="" > 是</span>
-                <input class="" type="radio" style="height:20px;top: 30%;position: relative;margin-left: 30px;"  id="" name="copyright" value="no"> <span class="">否</span>
-                <input class="" type="text" id="" name="" placeholder="请填写转载地址">
+                <input class="" type="radio" style="height:20px;top: 30%;position: relative" id="" name="isCopy" value="true"> <span class="" > 是</span>
+                <input class="" type="radio" style="height:20px;top: 30%;position: relative;margin-left: 30px;"  id="" name="isCopy" value="false"> <span class="">否</span>
+                <input class="" type="text" id="" name="copyUrl" placeholder="请填写转载地址">
             </div>
         </div>
         <div class="row col-xs-12">
@@ -40,15 +40,15 @@
             <div class=" col-xs-10 " style="">
                 <!--文本编辑器-->
 
-                <script id="editor" type="text/plain"></script>
+                <script id="editor" name="content" type="text/plain"></script>
 
             </div>
         </div>
         <div class="row col-xs-12">
             <h3 class="row col-xs-2">文章操作：</h3>
             <div class=" col-xs-10 " style="padding-top: 20px" align="center">
-                <input type="submit"  class="input_btn_1" value="发表文章">
-                <input type="button" class="input_btn_1" id="saveAsrough" value="保存为草稿">
+                <input type="button" onclick="mySubmit('publish')"  class="input_btn_1" value="发表文章">
+                <input type="button" onclick="mySubmit('save')" class="input_btn_1" id="saveAsrough" value="保存为草稿">
                 <input type="reset" class="input_btn_1" value="舍弃">
 
             </div>

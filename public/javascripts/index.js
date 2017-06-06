@@ -6,67 +6,77 @@
  */
 $(document).ready(function () {
     //导航
-        $('.navbar-nav li ').each(function (n, v) {
-            $(v).bind('click',function(){
-                var url=$($(v ).children('a').get(0)).attr('menu-url');
-                $('#mainPage').load(url);
+    $('.navbar-nav li ').each(function (n, v) {
+        $(v).bind('click', function () {
+            var url = $($(v).children('a').get(0)).attr('menu-url');
+            $('#mainPage').load(url);
 
-                $('.navbar-nav li ').each(function (m, b) {
-                    $(b).removeClass('active');
-                })
-                $(v).addClass('active');
-            });
+            $('.navbar-nav li ').each(function (m, b) {
+                $(b).removeClass('active');
+            })
+            $(v).addClass('active');
+        });
     })
 //热门排行
     $('.main .box-right .hot-sort .hot-recommend-ul li').each(function (n, v) {
-        $(v).bind('click',function(){
+        $(v).bind('click', function () {
             $('.main .box-right .hot-sort .hot-recommend-ul li').each(function (n, b) {
                 $(b).removeClass('active');
             })
             $(v).addClass('active');
-            var number=$(v).attr('order');
-            $('#active-line').animate({left:number*93+'px',opacity:'0.8'},"slow");
-            $('#hort-sort-content').animate({left:number*(-277.5)+'px',opacity:'0.8'},"slow");
+            var number = $(v).attr('order');
+            $('#active-line').animate({left: number * 120 + 'px', opacity: '0.8'}, "slow");
+            $('#hort-sort-content').animate({left: number * (-360) + 'px', opacity: '0.8'}, "slow");
         })
     })
 
-
+    initContent();
 })
+//首页内容初始化
+function initContent() {
+    $.ajax({
+        url: "blogWrite/select",
+        type: 'POST',
+        //data: formData,
+        dataType: "json",
+        success: function (data) {
+            if (data.resultCode == '0000') {
+                var articles = data.articles;
+                for (var i = 0; i < articles.length; i++) {
+                    $('#articles').append(
+                        '<div class="article" id="article_index_'+i+'">' +
+                        '<div class="left" style="width:250px;height: 200px;margin:5px ">' +
+                        ' <a><img src="../images/1d7c3211eba65ca6b328d7f28e10ecc6.jpg"' +
+                        'alt="【匆匆那些年】总结个人博客经历的这四年…"></a>' +
+                        '</div>' +
+                        ' <div class="right" style="width:400px;height:200px">' +
+                        ' <h3><a href="/jstt/bj/2015-01-09/740.html">'+articles[i].title+'</a></h3>' +
+                        ' <ul style="height: 110px;">' +
+                        '<p></p>' +
+                        ' <a title="【匆匆那些年】总结个人博客经历的这四年…" href="/jstt/bj/2015-01-09/740.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>' +
+                        '</ul>' +
+                        '<p class="dateview"><span>2015-01-09</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：'+articles[i].authorName+'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>个人博客：[<a href="/jstt/bj/">'+articles[i].classify+'</a>]</span></p>' +
+                        '</div>' +
+                        '</div>'
+                    )
+                    $('#article_index_'+i+' div.right ul p').append(articles[i].content);
+                }
 
-
-
-//@ sourceURL=index.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
+        },
+        failure: function (data) {
+            alert("错误");
+            return;
+        }
+    })
+    //$('div.article div.right ul p').each(function (n, v) {
+    //    var content = $(v).html();
+    //    content.replace(/&lt;/g, '<');
+    //    content.replace(/&gt;/g, '>');
+    //    console.log(content)
+    //    $(v).append(content);
+    //});
+}
 
 
 

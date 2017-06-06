@@ -18,7 +18,33 @@ console.log(222);
 
 });
 
+function mySubmit(m){
+    if(m=='publish'){
+        var formData = new FormData($("#writeArticleForm")[0]);
+        formData.append('status',0);
+        console.log(formData);
+        $.ajax({
+            url: "blogWrite/create",
+            type: 'POST',
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: "json",
+            success: function (data) {
+                alert(data);
+            },
+            failure: function (data) {
+                alert("错误");
+                return ;
+            }
+        })
 
+        //$('#writeArticleForm').submit();
+    }else{
+        $('#writeArticleForm').submit();
+    }
+}
 
 
 //@ sourceURL=blogWrite.js

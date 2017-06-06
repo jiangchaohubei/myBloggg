@@ -29,6 +29,13 @@ module.exports=new mongoose.Schema({
         type:Date,
         default:new Date(),
     },
+    //状态
+    status:{
+        type:Number,   //0发表；1草稿；
+        default:0,
+    },
+
+
     //文章图标
     picture:{
         type:String,
