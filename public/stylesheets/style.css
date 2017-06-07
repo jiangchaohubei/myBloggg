@@ -155,6 +155,7 @@ figure {
   height:220px;
   width:1000px;
   margin-top: 10px;
+  border-radius: 10px;
   background-color: #ffffff;
 }
 div.article :hover{
@@ -223,4 +224,7 @@ div.article :hover{
   color:#ffffff;
   padding: 8px;
   border-radius: 3px;
+}
+.row{
+  border-radius: 10px;
 }

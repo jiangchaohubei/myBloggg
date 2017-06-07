@@ -21,13 +21,13 @@ router.get('/select/blogs', function(req, res, next) {
     var sord = 1; //降序
     var sort = {};
     sort[sortName] = sord;
-    var skip = (page - 1) * limit; //查询开始
+
     var query = blog.count({});
     query.where("status", 0);  //已发表
     query.exec().then(function (count) {
         var totalPages=Math.ceil(count/limit);//总页数
         page = Math.min(page, totalPages);
-        page = Math.max(page, 1);
+        var skip = (page - 1) * limit; //查询开始
         query.find().sort(sort).skip(skip).limit(limit).then(function (data) {
             res.jsonp({articles:data,totalPages:totalPages,count:count,page:page,resultCode:'0000'});
         })
