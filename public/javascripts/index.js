@@ -6,17 +6,17 @@
  */
 $(document).ready(function () {
     //导航
-    $('.navbar-nav li ').each(function (n, v) {
-        $(v).bind('click', function () {
-            var url = $($(v).children('a').get(0)).attr('menu-url');
-            $('#mainPage').load(url);
-
-            $('.navbar-nav li ').each(function (m, b) {
-                $(b).removeClass('active');
-            })
-            $(v).addClass('active');
-        });
-    })
+    //$('.navbar-nav li ').each(function (n, v) {
+    //    $(v).bind('click', function () {
+    //        var url = $($(v).children('a').get(0)).attr('menu-url');
+    //        $('#mainPage').load(url);
+    //
+    //        $('.navbar-nav li ').each(function (m, b) {
+    //            $(b).removeClass('active');
+    //        })
+    //        $(v).addClass('active');
+    //    });
+    //})
 //热门排行
     $('.main .box-right .hot-sort .hot-recommend-ul li').each(function (n, v) {
         $(v).bind('click', function () {
@@ -35,7 +35,7 @@ $(document).ready(function () {
 //首页内容初始化
 function initContent() {
     $.ajax({
-        url: "blogWrite/select",
+        url: "select/blogs",
         type: 'POST',
         //data: formData,
         dataType: "json",
@@ -69,13 +69,7 @@ function initContent() {
             return;
         }
     })
-    //$('div.article div.right ul p').each(function (n, v) {
-    //    var content = $(v).html();
-    //    content.replace(/&lt;/g, '<');
-    //    content.replace(/&gt;/g, '>');
-    //    console.log(content)
-    //    $(v).append(content);
-    //});
+
 }
 
 

@@ -32,7 +32,7 @@ function mySubmit(m){
             processData: false,
             dataType: "json",
             success: function (data) {
-                alert(data);
+                alert("提交成功");
             },
             failure: function (data) {
                 alert("错误");

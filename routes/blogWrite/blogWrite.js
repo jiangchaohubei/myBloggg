@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var article=require('../../models/article');
+var blog=require('../../models/blog');
 var mutipart = require('connect-multiparty');
 var mutipartMiddeware = mutipart();
 /* GET home page. */
@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 router.post('/create',mutipartMiddeware, function(req, res, next) {
     var status=req.body.status;
     var content=req.body.content;
-   new article({
+   new blog({
        authorId:0000001,
        authorName:"岁月神偷",
        viewTimes:100,
@@ -39,10 +39,10 @@ router.post('/create',mutipartMiddeware, function(req, res, next) {
 });
 //查询文章
 router.post('/select', function(req, res, next) {
-    var query = article.count({});
+    var query = blog.count({});
     query.where("status", 0);
     query.exec().then(function (count) {
-        query.find().then(function (data) {
+        query.find().limit(5).then(function (data) {
             res.jsonp({articles:data,resultCode:'0000'});
         })
     });
