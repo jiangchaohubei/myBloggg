@@ -9,6 +9,7 @@ body {
 
 a {
   color: #00B7FF;
+  text-decoration: none!important;
 
 }
 .navbar-default {
@@ -125,9 +126,11 @@ a {
 .box-left{
   width:1000px;
   float: left;
+  margin-top: 20px;
 }
 .box-right{
   float: right;
+  margin-top: 20px;
 }
 h2.title-home{
   font: 24px "微软雅黑", Arial, Helvetica, sans-serif;
@@ -227,4 +230,21 @@ div.article :hover{
 }
 .row{
   border-radius: 10px;
+}
+.blogView-category{
+  border-bottom:dashed 1px #aaaded;
+  border-top:dashed  1px #aaaded;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.copyRight{
+  border-left: solid 5px #ff0000;
+}
+.article-contents{
+  width:200px;
+  border: solid 1px #ccc;
+  background-color: #eee;
+
 }

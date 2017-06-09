@@ -24,10 +24,10 @@ function initContent(url) {
                         'alt="【匆匆那些年】总结个人博客经历的这四年…"></a>' +
                         '</div>' +
                         ' <div class="right" style="width:400px;height:200px">' +
-                        ' <h3><a href="/jstt/bj/2015-01-09/740.html">' + articles[i].title + '</a></h3>' +
+                        ' <h3><a href="/blogView?_id='+articles[i]._id+'">' + articles[i].title + '</a></h3>' +
                         ' <ul style="height: 110px;">' +
                         '<p></p>' +
-                        ' <a title="【匆匆那些年】总结个人博客经历的这四年…" href="/jstt/bj/2015-01-09/740.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>' +
+                        ' <a title="【匆匆那些年】总结个人博客经历的这四年…" href="/blogView?_id='+articles[i]._id+'" target="_blank" class="readmore">阅读全文&gt;&gt;</a>' +
                         '</ul>' +
                         '<p class="dateview"><span>2015-01-09</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：' + articles[i].authorName + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>个人博客：[<a href="/jstt/bj/">' + articles[i].classify + '</a>]</span></p>' +
                         '</div>' +
