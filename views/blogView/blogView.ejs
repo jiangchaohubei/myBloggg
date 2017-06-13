@@ -64,19 +64,29 @@
     <div class="col-xs-12">
         <!--文章推荐-->
         <div class="box-left col-xs-3" style="background-color: #ffffff">
-            <h2  style="text-align: center">文章标题</h2>
+            <h2  style="text-align: center"><%=blog.title%></h2>
             <span>
                 标签：
-                <a>nodejs</a>
-                <a>java</a>
-                <a>博客</a>
+                <%(blog.tag).forEach(function(tag){%>
+                <a><%=tag%></a>
+                <%})%>
+
             </span>
 
             <div class="blogView-category">
-                <img src=""><strong>分类:</strong><a>nodejs</a>
+                <img src=""><strong>分类:</strong>
+                标签：
+                <%(blog.classify).forEach(function(classify){%>
+                <a><%=classify%></a>
+                <%})%>
             </div>
             <div class="copyRight">
-                版权说明：本文为<a>岁月神偷</a>原创文章，非商用自由转载-保持署名-注明出处，谢谢。
+                版权说明：本文为<a><%=blog.authorName%></a>
+                <%if(blog.isCopy){%>
+                转载文章，转载地址<a href=<%=blog.copyUrl%>><%=blog.copyUrl%></a>
+                <%}else{%>
+                原创文章，非商用自由转载-保持署名-注明出处，谢谢。
+                <%}%>
             </div>
             <div class="article-contents">
                 <p style="text-align: right;margin: 5px 5px 5px 5px">
@@ -89,24 +99,17 @@
                     <li><a href="#t3" style="color: #ff0000;">下载地址</a></li>
                 </ol>
             </div>
-            <div class="" style="margin-top: 50px" id="mainContent">
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
-                <p>这里是博客正文！</p>
+            <div class="" style="margin-top: 50px" id="mainContent" escape="false">
+                <%-blog.content%>
             </div>
-
+            <div class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1497337263541">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            </div>
 
         </div>
         <div class="box-right col-xs-3">

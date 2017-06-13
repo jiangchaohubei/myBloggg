@@ -22,4 +22,8 @@ function expandList(v){
 
     })
 
-    }
+}
+//初始化博客
+function selectSingleBlog(){
+
+}
