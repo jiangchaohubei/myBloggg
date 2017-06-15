@@ -44,5 +44,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-app.listen(8080);
-console.log("网址127.0.0.1:8080");
+app.listen(80);
+console.log("网址127.0.0.1:80");
