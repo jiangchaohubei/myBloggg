@@ -34,13 +34,13 @@ function initContent(url) {
                         ' <a><img src="../images/1d7c3211eba65ca6b328d7f28e10ecc6.jpg"' +
                         'alt="【匆匆那些年】总结个人博客经历的这四年…"></a>' +
                         '</div>' +
-                        ' <div class="right" style="width:400px;height:200px">' +
-                        ' <h3><a href="/blogView?_id='+articles[i]._id+'">' + articles[i].title + '</a></h3>' +
+                        ' <div class="right" style="width:700px;height:200px">' +
+                        ' <h3 style="white-space: nowrap;text-overflow:ellipsis;width: 650px;overflow:hidden;"><a href="/blogView?_id='+articles[i]._id+'" >' + articles[i].title + '</a></h3>' +
                         ' <ul style="height: 110px;">' +
-                        '<p></p>' +
+                        '<p class="noWrap" style="height:80px;width: 650px"></p>' +
                         ' <a title="【匆匆那些年】总结个人博客经历的这四年…" href="/blogView?_id='+articles[i]._id+'" target="_blank" class="readmore">阅读全文&gt;&gt;</a>' +
                         '</ul>' +
-                        '<p class="dateview"><span>2015-01-09</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：' + articles[i].authorName + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>个人博客：[<a href="/jstt/bj/">' + articles[i].classify + '</a>]</span></p>' +
+                        '<p class="dateview "><span>'+articles[i].creatTime.substring(0,10)+'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：' + articles[i].authorName + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>个人博客：[<a href="/jstt/bj/">' + articles[i].classify + '</a>]</span></p>' +
                         '</div>' +
                         '</div>'
                     )

@@ -13,14 +13,14 @@ router.get('/', function(req, res, next) {
     var _id=req.query._id;//id
 
     blog.findById(mongoose.Types.ObjectId(_id), function (err, blog) {
-        res.render('blogView/blogView', { title: '江超的博客',blog:blog ,});
+        res.render('blogView/blogView', { title: blog.title+'-江超的博客',blog:blog ,});
     })
 
 
 });
 
 
-//查询文章列表
+//查询文章
 router.get('/select/singleBlog', function(req, res, next) {
     var _id=req.query._id;//id
 

@@ -17,8 +17,8 @@ router.get('/select/blogs', function(req, res, next) {
     var page=req.query.page;//目标页
     //console.log(req.query);
     var limit=5;          //每页显示数量
-    var sortName=req.query.sortName?req.query.sortName:"createTime";  //按。。排序
-    var sord = 1; //降序
+    var sortName=req.query.sortName?req.query.sortName:"_id";  //按。。排序
+    var sord = -1; //降序
     var sort = {};
     sort[sortName] = sord;
 
@@ -28,7 +28,7 @@ router.get('/select/blogs', function(req, res, next) {
         var totalPages=Math.ceil(count/limit);//总页数
         page = Math.min(page, totalPages);
         var skip = (page - 1) * limit; //查询开始
-        query.find().sort(sort).skip(skip).limit(limit).then(function (data) {
+        query.find().sort(sort).limit(limit).skip(skip).then(function (data) {
             res.jsonp({articles:data,totalPages:totalPages,count:count,page:page,resultCode:'0000'});
         })
     });

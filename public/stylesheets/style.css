@@ -145,7 +145,7 @@ figure {
   -webkit-margin-end: 40px;
 }
 .dateview {
-  width: 400px;
+  width: 700px;
   margin-bottom: 0px;
 
   background: #f6f6f6 url(../images/time.jpg) 15px center no-repeat;
@@ -285,4 +285,8 @@ div.article :hover{
   text-indent: -100em;
   overflow: hidden;
   color: #3a8ceb;
+}
+.noWrap{
+   overflow:hidden; text-overflow:ellipsis;
+  word-wrap:break-word; word-break:normal;
 }

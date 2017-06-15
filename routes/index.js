@@ -10,10 +10,14 @@ router.get('/', function(req, res, next) {
 
 //首页查询文章推荐
 router.post('/select/blogs', function(req, res, next) {
+      var sortName="_id";  //按。。排序
+      var sord = -1; //降序
+      var sort = {};
+      sort[sortName] = sord;
       var query = blog.count({});
       query.where("status", 0);
       query.exec().then(function (count) {
-            query.find().limit(5).then(function (data) {
+            query.find().sort(sort).limit(5).then(function (data) {
                   res.jsonp({articles:data,resultCode:'0000'});
             })
       });

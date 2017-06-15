@@ -12,9 +12,9 @@ var mutipartMiddeware = mutipart();
 //    res.render('blogWrite/blogWrite', { title: '写博客' });
 //});
 //网易云跟帖回退评论数据
-router.get('/wyCreateComment', function(req, res, next) {
+router.post('/wyCreateComment', function(req, res, next) {
     console.log(req.body);
-    console.log(req.query);
+
 });
 
 
