@@ -17,9 +17,9 @@ router.post('/create',mutipartMiddeware, function(req, res, next) {
    new blog({
        authorId:0000001,
        authorName:"岁月神偷",
-       viewTimes:100,
-       pointNumber:100,
-       creatTime:new Date(),
+       viewTimes:0,
+       pointNumber:0,
+       creatTime:new Date(""),
        status:req.body.status,
        picture:"",
        title:req.body.title,

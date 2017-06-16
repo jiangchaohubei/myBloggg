@@ -72,7 +72,12 @@
                 <%})%>
 
             </span>
-
+            <div class="article_r row" style="text-align: right">
+                <span class="link_postdate"><%=creatTime%></span>
+                <span class="link_view" title="阅读次数"><span class="glyphicon glyphicon-eye-open"></span><%=blog.viewTimes%>人阅读</span>
+                <span class="link_comments" title="评论次数"> <a href="#cloud-tie-wrapper" ><span class="glyphicon glyphicon-comment"></span>评论</a>(<%=blog.commentNumber%>)</span>
+                <span class="link_collect tracking-ad" data-mod="popu_171"> <a href="javascript:void(0);"  title="收藏" target="_blank"><span class="glyphicon glyphicon-star-empty"></span>收藏</a></span>
+            </div>
             <div class="blogView-category">
                 <img src=""><strong>分类:</strong>
                 标签：
@@ -114,18 +119,18 @@
             </div>
             <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
             <div class="row" style="text-align:center">
-                <a  style="color: red;margin-right: 20px" >
+                <a onclick="javascript:return blogViewPoint('up','<%=blog._id%>',this)"  style="margin-right: 20px" >
                     <span class="glyphicon glyphicon-thumbs-up"></span>
                 </a>
-                <a style="margin-left: 20px">
+                <a onclick="javascript:return blogViewPoint('down','<%=blog._id%>',this)" style="margin-left: 20px">
                     <span class="glyphicon glyphicon-thumbs-down"></span>
                 </a>
             </div>
             <div class="row" style="text-align:center">
 
-                    <span class="" style="margin-right: 20px">5</span>
+                    <span class="" style="margin-right: 20px"><%=blog.pointNumber%></span>
 
-                    <span class="" style="margin-left: 20px">2</span>
+                    <span class="" style="margin-left: 20px"><%=blog.pointDownNumber%></span>
 
             </div>
             <div id="cloud-tie-wrapper" class="cloud-tie-wrapper row"></div>

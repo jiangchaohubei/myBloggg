@@ -290,3 +290,6 @@ div.article :hover{
    overflow:hidden; text-overflow:ellipsis;
   word-wrap:break-word; word-break:normal;
 }
+.article_r span{
+  margin:5px 10px 5px 10px;
+}

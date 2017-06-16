@@ -24,6 +24,16 @@ module.exports=new mongoose.Schema({
         type:Number,
         default:0,
     },
+    //不赞成数
+    pointDownNumber:{
+        type:Number,
+        default:0,
+    },
+    //评论数量
+    commentNumber:{
+        type:Number,
+        default:0,
+    },
     //创建时间
     creatTime:{
         type:Date,
