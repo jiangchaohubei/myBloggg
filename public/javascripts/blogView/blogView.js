@@ -13,6 +13,9 @@ $(document).ready(function() {
             $('#hort-sort-content').animate({left: number * (-360) + 'px', opacity: '0.8'}, "slow");
         })
     })
+    //初始化目录
+    initList();
+
 })
 
 //目录展开与收起
@@ -22,10 +25,12 @@ function expandList(v){
             $(element).css('display','block');
             $(v).html('[-]');
             $(v).attr('title','收起');
+
         }else{
             $(element).css('display','none');
             $(v).html('[+]');
             $(v).attr('title','展开');
+
         }
 
 
@@ -33,10 +38,84 @@ function expandList(v){
     })
 
 }
-//初始化博客
-function selectSingleBlog(){
-
+//初始化目录
+function initList(){
+    var tags=[];
+        $('#mainContent').find(':header').each(function(n,v){
+            var head={};
+            var tagName=$(v).get(0).tagName;
+            var n;
+            switch (tagName){
+                case 'H1':n=1; return ;
+                case 'H2':n=2; return ;
+                case 'H3':n=3; return ;
+                case 'H4':n=4; return ;
+                case 'H5':n=5; return ;
+                case 'H6':n=6; return ;
+            }
+            head.number=n;
+            head.title=$(v).html();
+            tags.push(head);
+        });
+    console.log(tags);
+    var olArr=[];
+    var str='<ol style="margin-left: 14px; padding-left: 14px; line-height: 160%; display: none;">';
+    createList(tags,str,olArr);
+    str+='</ol>'
+$('#blogList').append(str);
+    //var list=new Array();
+    //for(var i=0;i<tags.length;i++){
+    //    list[i]=new Array();
+    //
+    //}
+    //for(var i=0;i<tags.length;i++){
+    //    if(i==0){
+    //        list.push(tags[i].title);
+    //    }else{
+    //        if(tags[i].number<tags[i-1].number){
+    //
+    //        }
+    //    }
+    //
+    //}
 }
+function createList(tags,str,olArr){
+
+    for(var i=0;i<tags.length;i++){
+        if(i==0){
+            str+= '<li><a href="#t'+i+'" style="color: #ff0000;">'+tags[i].title+'</a></li>';
+
+
+        }else{
+            if(tags[i].number>tags[i-1].number){
+                str+= '<ol>'+
+                    '<li><a href="#t'+i+'" style="color: #ff0000;">'+tags[i].title+'</a></li>';
+                olArr.push(i);
+            }else if(tags[i].number==tags[i-1].number){
+                str+='<li><a href="#t'+i+'" style="color: #ff0000;">'+tags[i].title+'</a></li>';
+            }else{
+
+                for(var j=olArr.length-1;j>=0;j--){
+                    str+='</ol>';
+                    if(olArr[j]==0){
+                        var newArr=tags.slice(i);
+                        if(newArr.length==0){
+                            return ;
+                        }
+                        createList(newArr,str,olArr);
+
+                    }else{
+                        if(tags[i].number>=tags[olArr[j]].number){
+                            str+='<li><a href="#t'+i+'" style="color: #ff0000;">'+tags[i].title+'</a></li>';
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//文章点赞or狂踩
 function blogViewPoint(str,_id,dom){
     var postData={};
     postData.pointType=str;

@@ -61,7 +61,7 @@ router.get('/select/singleBlog', function(req, res, next) {
     })
 
 })
-//点赞
+//点赞or狂踩
 
 router.post('/point', function(req, res, next) {
     var _id=req.body._id;//id
@@ -108,4 +108,5 @@ router.post('/point', function(req, res, next) {
     })
 
 })
+
 module.exports = router;
