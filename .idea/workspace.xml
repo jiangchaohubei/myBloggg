@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aaaa21cc-9177-4c59-9b13-151534434a03" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/zTree/img/line_conn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/zTree/img/zTreeStandard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/zTree/github1-contents.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/zTree/github2-rightpart.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/zTree/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/zTree/jquery.ztree.all-3.5.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/zTree/jquery.ztree_toc.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/zTree/zTreeStyle.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap3.3.7/js/bootstrap.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/blogView/blogView.js" afterPath="$PROJECT_DIR$/public/javascripts/blogView/blogView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/blogView/blogView.js" afterPath="$PROJECT_DIR$/routes/blogView/blogView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/blogWrite/blogWrite.js" afterPath="$PROJECT_DIR$/public/javascripts/blogWrite/blogWrite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/blogs/blogs.js" afterPath="$PROJECT_DIR$/public/javascripts/blogs/blogs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/blogWrite/blogWrite.js" afterPath="$PROJECT_DIR$/routes/blogWrite/blogWrite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/blogs/blogs.js" afterPath="$PROJECT_DIR$/routes/blogs/blogs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogView/blogView.ejs" afterPath="$PROJECT_DIR$/views/blogView/blogView.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogWrite/blogWrite.ejs" afterPath="$PROJECT_DIR$/views/blogWrite/blogWrite.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/blogs.ejs" afterPath="$PROJECT_DIR$/views/blogs/blogs.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
     </list>
     <ignored path="myBlog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,19 +33,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="blogs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="blogs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/blogs/blogs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="91" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="91" />
+            <state vertical-scroll-proportion="0.33827892">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="e#0#37#0" expanded="false" />
-                <marker date="1497519241822" expanded="true" signature="1247:1284" placeholder="..." />
-                <marker date="1497519241822" expanded="true" signature="1527:1551" placeholder="..." />
-                <marker date="1497519241822" expanded="true" signature="1594:1666" placeholder="..." />
-                <marker date="1497519241822" expanded="true" signature="1788:1802" placeholder="..." />
-                <marker date="1497519241822" expanded="true" signature="1858:1882" placeholder="..." />
-                <marker date="1497519241822" expanded="true" signature="3987:3998" placeholder="..." />
+                <marker date="1497949770956" expanded="true" signature="1377:1414" placeholder="..." />
+                <marker date="1497949770956" expanded="true" signature="1657:1681" placeholder="..." />
+                <marker date="1497949770956" expanded="true" signature="1724:1796" placeholder="..." />
+                <marker date="1497949770956" expanded="true" signature="1918:1932" placeholder="..." />
+                <marker date="1497949770956" expanded="true" signature="1988:2012" placeholder="..." />
+                <marker date="1497949770956" expanded="true" signature="4117:4128" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blogWrite.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/blogWrite/blogWrite.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.655738">
+              <caret line="93" column="107" selection-start-line="93" selection-start-column="107" selection-end-line="93" selection-end-column="107" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,73 +68,70 @@
         <entry file="file://$PROJECT_DIR$/routes/blogs/blogs.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blogWrite.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/blogWrite/blogWrite.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.290322">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.903225">
-              <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="blogView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/blogView/blogView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-              <folding>
-                <element signature="e#38#75#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blogView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/blogView/blogView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45845696">
-              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+            <state vertical-scroll-proportion="-50.733334">
+              <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
               <folding>
                 <element signature="e#0#37#0" expanded="false" />
-                <marker date="1497866701252" expanded="true" signature="1720:1792" placeholder="..." />
-                <marker date="1497866701252" expanded="true" signature="2344:2359" placeholder="..." />
-                <marker date="1497866701252" expanded="true" signature="2536:2551" placeholder="..." />
-                <marker date="1497866701252" expanded="true" signature="2720:2735" placeholder="..." />
-                <marker date="1497866701252" expanded="true" signature="3280:3295" placeholder="..." />
+                <element signature="n#!!block;n#expandList#0" expanded="false" />
+                <element signature="n#!!block;n#blogViewPoint#0" expanded="false" />
+                <marker date="1497943256765" expanded="true" signature="1955:2027" placeholder="..." />
+                <marker date="1497943256765" expanded="true" signature="2348:2363" placeholder="..." />
+                <marker date="1497943256765" expanded="true" signature="2541:2556" placeholder="..." />
+                <marker date="1497943256765" expanded="true" signature="2620:2635" placeholder="..." />
+                <marker date="1497943256765" expanded="true" signature="2862:2877" placeholder="..." />
+                <marker date="1497943256765" expanded="true" signature="3618:3633" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <file leaf-file-name="blogWrite.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/blogWrite/blogWrite.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="9" selection-start-line="66" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.032258">
+              <caret line="91" column="64" selection-start-line="85" selection-start-column="20" selection-end-line="91" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blogs.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/blogs/blogs.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.67742">
+              <caret line="105" column="64" selection-start-line="105" selection-start-column="64" selection-end-line="105" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blogWrite.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/blogWrite/blogWrite.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
               <folding>
-                <marker date="1497519285754" expanded="true" signature="1609:1646" placeholder="..." />
-                <marker date="1497519285754" expanded="true" signature="1889:1913" placeholder="..." />
-                <marker date="1497519285754" expanded="true" signature="1956:2028" placeholder="..." />
-                <marker date="1497519285754" expanded="true" signature="2145:2159" placeholder="..." />
-                <marker date="1497519285754" expanded="true" signature="2215:2227" placeholder="..." />
-                <marker date="1497519285754" expanded="true" signature="2215:2239" placeholder="..." />
+                <element signature="n#!!block;n#mySubmit#0" expanded="false" />
+                <marker date="1497945868828" expanded="true" signature="1354:1405" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -133,24 +140,8 @@
       <file leaf-file-name="blogView.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/blogView/blogView.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3442624">
-              <caret line="91" column="29" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#2;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.ztree_toc.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/zTree/jquery.ztree_toc.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state vertical-scroll-proportion="-8.064516">
+              <caret line="163" column="64" selection-start-line="163" selection-start-column="64" selection-end-line="163" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -160,7 +151,7 @@
         <entry file="file://$PROJECT_DIR$/schemas/blog.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="15" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="15" />
+              <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -196,27 +187,27 @@
         <option value="$PROJECT_DIR$/models/blog.js" />
         <option value="$PROJECT_DIR$/routesConfig.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/blogs/blogs.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/blogs/blogs.js" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
-        <option value="$PROJECT_DIR$/views/blogs/blogs.ejs" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/public/javascripts/blogWrite/blogWrite.js" />
         <option value="$PROJECT_DIR$/models/comment.js" />
         <option value="$PROJECT_DIR$/routes/comment/comment.js" />
         <option value="$PROJECT_DIR$/schemas/comment.js" />
         <option value="$PROJECT_DIR$/models/ipView.js" />
         <option value="$PROJECT_DIR$/schemas/blog.js" />
-        <option value="$PROJECT_DIR$/routes/blogWrite/blogWrite.js" />
         <option value="$PROJECT_DIR$/utils/date.js" />
         <option value="$PROJECT_DIR$/schemas/ipView.js" />
-        <option value="$PROJECT_DIR$/views/blogWrite/blogWrite.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/routes/blogView/blogView.js" />
         <option value="$PROJECT_DIR$/public/zTree/jquery.ztree_toc.min.js" />
-        <option value="$PROJECT_DIR$/views/blogView/blogView.ejs" />
+        <option value="$PROJECT_DIR$/routes/blogWrite/blogWrite.js" />
         <option value="$PROJECT_DIR$/public/javascripts/blogView/blogView.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/blogWrite/blogWrite.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/blogs/blogs.js" />
+        <option value="$PROJECT_DIR$/views/blogWrite/blogWrite.ejs" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/views/blogView/blogView.ejs" />
+        <option value="$PROJECT_DIR$/views/blogs/blogs.ejs" />
+        <option value="$PROJECT_DIR$/routes/blogs/blogs.js" />
       </list>
     </option>
   </component>
@@ -230,7 +221,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -508,6 +499,130 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBloggg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogWrite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBloggg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogView" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBloggg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBloggg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap3.3.7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBloggg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap3.3.7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myBloggg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -711,14 +826,20 @@
       <option name="project" value="LOCAL" />
       <updated>1497609175291</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="首页和写博客">
+      <created>1497866757987</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1497866757987</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15384616" sideWeight="0.49538866" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15364309" sideWeight="0.49538866" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19629225" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -762,20 +883,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -933,20 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogs/blogs.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="171" column="16" selection-start-line="171" selection-start-column="13" selection-end-line="171" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="23" selection-start-line="161" selection-start-column="23" selection-end-line="161" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -979,14 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.512">
           <caret line="153" column="31" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/blogWrite/blogWrite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1026,13 +1111,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/blogWrite/blogWrite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/comment/comment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1044,14 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/schemas/blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,42 +1140,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/blogs/blogs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/blogs/blogs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="91" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#37#0" expanded="false" />
-            <marker date="1497519241822" expanded="true" signature="1247:1284" placeholder="..." />
-            <marker date="1497519241822" expanded="true" signature="1527:1551" placeholder="..." />
-            <marker date="1497519241822" expanded="true" signature="1594:1666" placeholder="..." />
-            <marker date="1497519241822" expanded="true" signature="1788:1802" placeholder="..." />
-            <marker date="1497519241822" expanded="true" signature="1858:1882" placeholder="..." />
-            <marker date="1497519241822" expanded="true" signature="3987:3998" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.903225">
+        <state vertical-scroll-proportion="0.0">
           <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogWrite/blogWrite.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.290322">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1128,31 +1166,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogView/blogView.ejs">
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/error/validation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3442624">
-          <caret line="91" column="29" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#2;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#3;n#ol#0;n#div#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.3323442">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/blogWrite/blogWrite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schemas/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/blogView/blogView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45845696">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        <state vertical-scroll-proportion="-50.733334">
+          <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
           <folding>
             <element signature="e#0#37#0" expanded="false" />
-            <marker date="1497866701252" expanded="true" signature="1720:1792" placeholder="..." />
-            <marker date="1497866701252" expanded="true" signature="2344:2359" placeholder="..." />
-            <marker date="1497866701252" expanded="true" signature="2536:2551" placeholder="..." />
-            <marker date="1497866701252" expanded="true" signature="2720:2735" placeholder="..." />
-            <marker date="1497866701252" expanded="true" signature="3280:3295" placeholder="..." />
+            <element signature="n#!!block;n#expandList#0" expanded="false" />
+            <element signature="n#!!block;n#blogViewPoint#0" expanded="false" />
+            <marker date="1497943256765" expanded="true" signature="1955:2027" placeholder="..." />
+            <marker date="1497943256765" expanded="true" signature="2348:2363" placeholder="..." />
+            <marker date="1497943256765" expanded="true" signature="2541:2556" placeholder="..." />
+            <marker date="1497943256765" expanded="true" signature="2620:2635" placeholder="..." />
+            <marker date="1497943256765" expanded="true" signature="2862:2877" placeholder="..." />
+            <marker date="1497943256765" expanded="true" signature="3618:3633" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/blogWrite/blogWrite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!block;n#mySubmit#0" expanded="false" />
+            <marker date="1497945868828" expanded="true" signature="1354:1405" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.032258">
+          <caret line="91" column="64" selection-start-line="85" selection-start-column="20" selection-end-line="91" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogWrite/blogWrite.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.655738">
+          <caret line="93" column="107" selection-start-line="93" selection-start-column="107" selection-end-line="93" selection-end-column="107" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogView/blogView.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.064516">
+          <caret line="163" column="64" selection-start-line="163" selection-start-column="64" selection-end-line="163" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/blogs.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.67742">
+          <caret line="105" column="64" selection-start-line="105" selection-start-column="64" selection-end-line="105" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/blogs/blogs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/blogs/blogs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33827892">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+            <marker date="1497949770956" expanded="true" signature="1377:1414" placeholder="..." />
+            <marker date="1497949770956" expanded="true" signature="1657:1681" placeholder="..." />
+            <marker date="1497949770956" expanded="true" signature="1724:1796" placeholder="..." />
+            <marker date="1497949770956" expanded="true" signature="1918:1932" placeholder="..." />
+            <marker date="1497949770956" expanded="true" signature="1988:2012" placeholder="..." />
+            <marker date="1497949770956" expanded="true" signature="4117:4128" placeholder="..." />
           </folding>
         </state>
       </provider>

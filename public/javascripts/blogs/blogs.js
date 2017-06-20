@@ -17,6 +17,10 @@ $(document).ready(function () {
 })
 //初始化文章列表
 function initContent(url) {
+    var classify=$('#articles').attr('classify');
+    if(classify!=""&&classify!=null){
+        url+='&classify='+classify;
+    }
     $('#articles').html('');
     $('#articles_pageTool').html('');
     $.ajax({

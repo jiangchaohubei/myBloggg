@@ -65,7 +65,8 @@
         <!--文章推荐-->
         <div class="box-left col-xs-3">
             <h2 class="title-home title-shadow">文章列表</h2>
-            <div id="articles" class="bloglist left" >
+
+            <div id="articles" classify="<%=classify%>" class="bloglist left" >
                 <!--这里是文章列表内容-->
             </div>
             <div id="articles_pageTool" class="pageTool" >
@@ -96,13 +97,13 @@
             <div class="row content-category" style="margin-top: 30px;background-color: #ffffff">
                 <h1 class="title-shadow" style="color: #5bc0de">内容分类</h1>
                 <ul>
-                    <li><a href="#">nodejs</a></li>
-                    <li><a href="#">mongodb</a></li>
-                    <li><a href="#">java</a></li>
-                    <li><a href="#">mysql</a></li>
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">音乐</a></li>
-                    <li><a href="#">其他</a></li>
+                    <li><a href="/blogs?classify=nodejs">nodejs</a></li>
+                    <li><a href="/blogs?classify=mongodb">mongodb</a></li>
+                    <li><a href="/blogs?classify=java">java</a></li>
+                    <li><a href="/blogs?classify=mysql">mysql</a></li>
+                    <li><a href="/blogs?classify=关于">关于</a></li>
+                    <li><a href="/blogs?classify=音乐">音乐</a></li>
+                    <li><a href="/blogs?classify=其他">其他</a></li>
                 </ul>
             </div>
             <div class="row content-category" style="margin-top: 30px;background-color: #ffffff">

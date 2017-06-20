@@ -76,7 +76,6 @@
             </div>
             <div class="blogView-category">
                 <img src=""><strong>分类:</strong>
-                标签：
                 <%(blog.classify).forEach(function(classify){%>
                 <a><%=classify%></a>
                 <%})%>
@@ -93,12 +92,12 @@
                 <p style="text-align: right;margin: 5px 5px 5px 5px">
                 <span style="float: left">目录<a href="#" style="color: #ff0000;" title="系统根据文章中H1到H6标签自动生成文章目录">(?)</a></span><a  onclick="javascript:return expandList(this)" title="展开" style="color: #ff0000;">[+]</a>
                 </p>
-                <ol style="margin-left: 14px; padding-left: 14px; line-height: 160%; display: none;">
-                    <li><a href="#t0" style="color: #ff0000;">前言</a></li>
-                    <li><a href="#t1" style="color: #ff0000;">使用说明</a></li>
-                    <li><a href="#t2" style="color: #ff0000;">实现原理</a></li>
-                    <li><a href="#t3" style="color: #ff0000;">下载地址</a></li>
-                </ol>
+                <!--<ol style="margin-left: 14px; padding-left: 14px; line-height: 160%; display: none;">-->
+                    <!--<li><a href="#t0" style="color: #ff0000;">前言</a></li>-->
+                    <!--<li><a href="#t1" style="color: #ff0000;">使用说明</a></li>-->
+                    <!--<li><a href="#t2" style="color: #ff0000;">实现原理</a></li>-->
+                    <!--<li><a href="#t3" style="color: #ff0000;">下载地址</a></li>-->
+                <!--</ol>-->
             </div>
             <div class="" style="margin-top: 50px" id="mainContent" escape="false">
                 <%-blog.content%>
@@ -156,13 +155,13 @@
             <div class="row content-category" style="margin-top: 30px;background-color: #ffffff">
                 <h1 class="title-shadow" style="color: #5bc0de">内容分类</h1>
                 <ul>
-                    <li><a href="#">nodejs</a></li>
-                    <li><a href="#">mongodb</a></li>
-                    <li><a href="#">java</a></li>
-                    <li><a href="#">mysql</a></li>
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">音乐</a></li>
-                    <li><a href="#">其他</a></li>
+                    <li><a href="/blogs?classify=nodejs">nodejs</a></li>
+                    <li><a href="/blogs?classify=mongodb">mongodb</a></li>
+                    <li><a href="/blogs?classify=java">java</a></li>
+                    <li><a href="/blogs?classify=mysql">mysql</a></li>
+                    <li><a href="/blogs?classify=关于">关于</a></li>
+                    <li><a href="/blogs?classify=音乐">音乐</a></li>
+                    <li><a href="/blogs?classify=其他">其他</a></li>
                 </ul>
             </div>
             <div class="row content-category" style="margin-top: 30px;background-color: #ffffff">
