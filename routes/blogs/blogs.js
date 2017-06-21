@@ -7,10 +7,14 @@ var blog=require('../../models/blog');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var classify="";
+    var searchLike="";
     if(req.query.classify!=""&&req.query.classify!=null){
         classify=req.query.classify;
     }
-    res.render('blogs/blogs', { title: '江超的博客',classify:classify });
+    if(req.query.searchLike!=""&&req.query.searchLike!=null){
+        searchLike=req.query.searchLike;
+    }
+    res.render('blogs/blogs', { title: '江超的博客',classify:classify,searchLike:searchLike });
 
 });
 
@@ -31,6 +35,11 @@ router.get('/select/blogs', function(req, res, next) {
     query.where("status", 0);  //已发表
     if(req.query.classify!=""&&req.query.classify!=null){
        query.where("classify").in([req.query.classify]);  //按类别查
+    }
+    if(req.query.searchLike!=""&&req.query.searchLike!=null){
+        console.log(req.query.searchLike);
+        query.where("title", new RegExp('/*'+req.query.searchLike+'/*'));
+        query.where('authorName', new RegExp('/*'+req.query.searchLike+'/*'));
     }
     query.exec().then(function (count) {
         var totalPages=Math.ceil(count/limit);//总页数

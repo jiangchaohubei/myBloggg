@@ -22,7 +22,7 @@
 </head>
 <body>
 <!-- --------------------------导航------------------------->
-<div class="container navigation">
+<div class="container navigation ">
     <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -36,9 +36,9 @@
                 <a class="navbar-brand " href="/">首页</a>
             </div>
             <div>
-                <form class="navbar-form navbar-left" role="search">
+                <form class="navbar-form navbar-left" method="get" action="/blogs" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" name="searchLike" class="form-control" placeholder="Search">
                     </div>
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
@@ -65,25 +65,25 @@
 <div id="mainPage" class="container main">
 <div class="panel-body" style="height:auto;padding: 0px">
     <form id="writeArticleForm"  class="form"   style="margin:0;display:block">
-        <div class="row col-xs-12">
+        <div class="row col-xs-12 ">
             <h3 class="row col-xs-2">文章标题：</h3>
-            <div class=" col-xs-10">
-                &nbsp;<input type="text" class="form-control" style="height:25px" id="" name="title">
+            <div class=" col-xs-10 ">
+                &nbsp;<input id="title" type="text" class="form-control " data-placement="top" data-content="文章标题必填！" style="height:25px"  name="title">
             </div>
         </div>
         <div class="row col-xs-12">
             <h3 class="row col-xs-2">检索标签：</h3>
             <div class=" col-xs-10 " style="height: 56.4px;">
-                &nbsp;<input type="text" class=" " style="width:100px;height:25px;top: 30%;position: relative" id="" name="tag" placeholder="标签">
+                &nbsp;<input type="text"  class="" style="width:100px;height:25px;top: 30%;position: relative" id="" name="tag" placeholder="标签">
 
-                <input type="button" onclick="addTags(this)" data-container="body" data-toggle="popover" data-placement="top" data-content="最多5个标签" style="width:50px;height:25px;top: 30%;position: relative" value="添加">
+                <input id="addTagsBtn" type="button" class="" onclick="addTags(this)"  data-placement="top" data-content="最多5个标签" style="width:50px;height:25px;top: 30%;position: relative" value="添加">
 
             </div>
         </div>
-        <div class="row col-xs-12">
+        <div class="row col-xs-12 ">
             <h3 class="row col-xs-2">文章分类：</h3>
             <div class=" col-xs-10 " style="height: 56.4px">
-                <select class="select from-control" style="width:100px;height:25px;top: 30%;position: relative" name="classify">
+                <select class="select from-control " style="width:100px;height:25px;top: 30%;position: relative" id="classify" data-placement="top" data-content="文章类别必填！" name="classify">
                     <option value="">--请选择--</option>
                     <option value="java">java</option>
                     <option value="nodejs">nodejs</option>
@@ -91,7 +91,7 @@
                     <option value="mysql">mysql</option>
                     <option value="其他">其他</option>
                 </select>
-                <input type="button" style="width:50px;height:25px;top: 30%;position: relative" value="添加">
+                <input type="button" class="" style="width:50px;height:25px;top: 30%;position: relative" value="添加">
             </div>
         </div>
         <div class="row col-xs-12">
@@ -130,7 +130,39 @@
     <p >苏ICP备17022286号 | Design by JiangChao,version 1.0 | 登陆</p>
 </div>
 <script src="/javascripts/blogWrite/blogWrite.js"></script>
+<script>
 
+    //覆盖控件js自带的fixed固定高度
+    $(function(){
+        //$("#first").text($("#inner").offset().top);距离浏览器顶部距离（）
+        // $("#second").text($("#inner").position().top);距离父元素顶部距离（）
+        // $("#third").text($("#inner").offset().top-$("body").scrollTop());距离窗口顶部距离（）
+
+        // window.scrollTo(0,0);
+        //获取要定位元素距离浏览器顶部的距离(编辑框工具栏)
+//        var editorH=$('#edui2').offset().top;
+//        console.log(editorH);
+        //滚动条事件
+        $(window).scroll(function(){
+            var editorH=$('#edui2').offset().top-$("body").scrollTop();
+            console.log(editorH);
+            //获取滚动条的滑动距离?
+            var scroH = $(this).scrollTop();
+//滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+            if(scroH>=editorH){
+                $("#edui1_toolbarbox").css({"width":1168,"z-index":1000,"position":"fixed", "top":50});
+            }else if(scroH<editorH){
+                $("#edui1_toolbarbox").css({"position":"static"});
+            }
+        })
+//页面卸载前将滚动条重置
+        window.onunload = unload;
+        function unload (e){
+            window.scrollTo(0,0);
+        }
+    })
+
+</script>
 
 </body>
 </html>

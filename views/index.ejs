@@ -34,9 +34,9 @@
                 <a class="navbar-brand active" href="/">首页</a>
             </div>
             <div>
-                <form class="navbar-form navbar-left" role="search">
+                <form class="navbar-form navbar-left" method="get" action="/blogs" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" name="searchLike" class="form-control" placeholder="Search">
                     </div>
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
@@ -74,8 +74,8 @@
         <div class="box-right col-xs-3">
             <!--搜索-->
             <div class="row" style="padding-top: 30px">
-                <form method="post" action="/article/search" class="form-wrapper">
-                    <input type="text" id="search" name="search" placeholder="请输入要搜索的文章" required="">
+                <form method="get" action="/blogs" class="form-wrapper">
+                    <input type="text" id="search" name="searchLike" placeholder="请输入要搜索的文章" required="">
                     <input type="submit" value="搜索" id="submit">
                 </form>
             </div>

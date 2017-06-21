@@ -55,7 +55,7 @@ function initContent() {
                         '<p class="noWrap" style="height:80px;width: 650px"></p>' +
                         ' <a title="【匆匆那些年】总结个人博客经历的这四年…" href="/blogView?_id='+articles[i]._id+'" target="_blank" class="readmore">阅读全文&gt;&gt;</a>' +
                         '</ul>' +
-                        '<p class="dateview"><span>'+articles[i].creatTime.substring(0,10)+'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：'+articles[i].authorName+'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>个人博客：[<a href="/jstt/bj/">'+articles[i].classify+'</a>]</span></p>' +
+                        '<p class="dateview"><span>'+articles[i].creatTime.substring(0,10)+'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>作者：'+articles[i].authorName+'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>个人博客：[<a href="/blogs?classify='+articles[i].classify+'">'+articles[i].classify+'</a>]</span></p>' +
                         '</div>' +
                         '</div>'
                     )

@@ -19,6 +19,22 @@ $(document).ready(function() {
 });
 //发布
 function mySubmit(m){
+    var title=$('#title').val();
+    var classify=$('#classify').val();
+    if(title==''||title==null){
+        $("#title").popover();
+
+        $('html,body').animate({scrollTop:$('#title').offset().top-100}, 800);
+        $("#title").click();
+        return;
+    }
+    if(classify==''||classify==null){
+        $("#classify").popover();
+
+        $('html,body').animate({scrollTop:$('#classify').offset().top-100}, 800);
+        $("#classify").click();
+        return;
+    }
     if(m=='publish'){
         var formData = new FormData($("#writeArticleForm")[0]);
         formData.append('status',0);
@@ -53,7 +69,7 @@ function addTags(v){
     }
     if(n==4){
 
-        $("[data-toggle='popover']").popover();
+        $("#addTagsBtn").popover();
     }
     $(v).before( '&nbsp;<input type="text" class="" style="width:100px;height:25px;top: 30%;position: relative" id="" name="tag" placeholder="标签">');
 
